@@ -1,0 +1,38 @@
+p {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; line-height: small}
+p.quote {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; line-height: small}
+a.script:link {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #0033CC}
+a.script:visited {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FF33CC}
+div.TOP {
+	font-size: 14pt;
+	background: #EEEEEE;
+
+} 
+a:link {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #0033CC}
+h1 {
+	font-size: 20pt;
+	background : #7799ee;
+	font :  bolder;
+	font-variant :  small-caps;
+	font-weight :  lighter;
+	font-family :  monospace;
+}
+
+h2 {
+	font-size: 14pt;
+	background: #C3B4E0;
+
+}
+
+BODY {
+	color : #331166
+	font-family : Arial, Tahoma, Helvetica, sans-serif;
+	background : #8f9cb7;
+}
+TABLE.TopIndex {
+	width: 80%;
+	font-family : monospace;
+	font : bolder normal;
+}
+
+ul {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; line-height: normal; font-weight: bold}
+ol {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; line-height: normal; font-weight: bold}

@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>Center(...)</title>
+    <link rel="stylesheet" href="../../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../../index.html">Docs</a></li> <li>></li> <li><a href="../../index.html">Real 3d Space</a></li> <li>></li> <li><a href="../index.html">Points</a></li> <li>></li> <li><a href="index.html">Determined</a></li> <li>></li> <li>centers</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../../quickstart.html">QuickStart</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Real 3d Space</a></strong>
+</li>
+<li><a href="../../real_abstracts.html">Real Abstracts</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Points</a></strong>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Determined</a></strong>
+</li>
+<li><a href="base_point.html">point</a>
+</li>
+<li><a href="intersects.html">intersects</a>
+</li>
+<li><a href="centers.html">centers</a>
+</li>
+<li><a href="inversions.html">inversions</a>
+</li>
+<li><a href="reflections.html">reflections</a>
+</li>
+<li><a href="dividers.html">dividers</a>
+</li>
+<li><a href="foot_points.html">foot points</a>
+</li>
+<li><a href="antipodals.html">antipodals</a>
+</li>
+</div>
+<li><a href="../pickable_animated/index.html">Pickable/Animated</a>
+</li>
+</div>
+<li><a href="../../lines/index.html">Lines</a>
+</li>
+<li><a href="../../circles.html">circles</a>
+</li>
+<li><a href="../../planes.html">planes</a>
+</li>
+<li><a href="../../spheres.html">spheres</a>
+</li>
+<li><a href="../../pointarrays.html">pointarrays</a>
+</li>
+<li><a href="../../curves.html">curves</a>
+</li>
+<li><a href="../../linearrays.html">linearrays</a>
+</li>
+<li><a href="../../planearray.html">planearray</a>
+</li>
+<li><a href="../../circlepencil.html">circlepencil</a>
+</li>
+<li><a href="../../transforms.html">transforms</a>
+</li>
+</div>
+<li><a href="../../../complex/index.html">Complex Numbers</a>
+</li>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="center">
+<h1 class="title"><strong>Center(....)</strong></h1>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#def-center" id="id3" name="id3">def Center</a><ul>
+<li><a class="reference" href="#class-circumcenter" id="id4" name="id4">class CircumCenter</a></li>
+<li><a class="reference" href="#class-orthocenter" id="id5" name="id5">class OrthoCenter</a></li>
+<li><a class="reference" href="#class-centroid" id="id6" name="id6">class Centroid</a></li>
+<li><a class="reference" href="#class-incenter" id="id7" name="id7">class InCenter</a></li>
+<li><a class="reference" href="#class-excenter" id="id8" name="id8">class ExCenter</a></li>
+<li><a class="reference" href="#class-tetracenter" id="id9" name="id9">class TetraCenter</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Objects derived from the <a class="reference" href="../../real_abstracts.html#class-point">_Point</a> abstract class,
+with its position in space determined as a geometric center of a given
+geometric object</p>
+<hr class="docutils" />
+<div class="section">
+<h1><a class="toc-backref" href="#id3" id="def-center" name="def-center">def Center</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Center(point1, point2, point3); calls: <a class="reference" href="#class-circumcenter">class CircumCenter</a></li>
+<li>Center(triangle); calls: <a class="reference" href="#class-circumcenter">class CircumCenter</a></li>
+<li>Center(point1, point2, point3, CIRCUM); calls: <a class="reference" href="#class-circumcenter">class CircumCenter</a></li>
+<li>Center(triangle, CIRCUM); calls: <a class="reference" href="#class-circumcenter">class CircumCenter</a></li>
+<li>Center(point1, point2, point3, ORTHO); calls: <a class="reference" href="#class-orthocenter">class OrthoCenter</a></li>
+<li>Center(triangle, ORTHO); calls: <a class="reference" href="#class-orthocenter">class OrthoCenter</a></li>
+<li>Center(point1, point2, point3, CENTROID); calls:  <a class="reference" href="#class-centroid">class Centroid</a></li>
+<li>Center(triangle. CENTROID); calls:  <a class="reference" href="#class-centroid">class Centroid</a></li>
+<li>Center(point1, point2, point3, INCENTER); calls:  <a class="reference" href="#class-incenter">class InCenter</a></li>
+<li>Center(triangle, INCENTER); calls:  <a class="reference" href="#class-incenter">class InCenter</a></li>
+<li>Center(point1, point2, point3, EXCENTER); calls:  <a class="reference" href="#class-excenter">class ExCenter</a></li>
+<li>Center(triangle, ExCENTER) ; calls:  <a class="reference" href="#class-excenter">class ExCenter</a></li>
+<li>Center(point1, point2, point3,point4) calls: <a class="reference" href="#class-tetracenter">class TetraCenter</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">a <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a>  instance determined as a geometric <a class="reference" href="http://mathworld.wolfram.com/Center.html">center</a> in reference to
+its arguments</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://www.geocities.com/kiranisingh/center.html">http://www.geocities.com/kiranisingh/center.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section">
+<h2><a class="toc-backref" href="#id4" id="class-circumcenter" name="class-circumcenter">class CircumCenter</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Center(point1, point2, point3 )</li>
+<li>Center(point1, point2, point3, CIRCUM)</li>
+<li>Center(triangle)</li>
+<li>Center(triangle, CIRCUM)</li>
+<li>CircumCente(point1, point2, point3 )</li>
+<li>CircumCenter(triangle)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Circumcenter.html">circumcenter</a> (<a class="reference" href="http://mathworld.wolfram.com/Center.html">center</a> of the <a class="reference" href="http://mathworld.wolfram.com/Circumcircle.html">circumcircle</a>) of a <a class="reference" href="http://mathworld.wolfram.com/Triangle.html">triangle</a>.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">points distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">undefined</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Circumcenter.html">http://mathworld.wolfram.com/Circumcenter.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id5" id="class-orthocenter" name="class-orthocenter">class OrthoCenter</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Center(point1, point2, point3, ORTHO)</li>
+<li>Center(triangle, ORTHO)</li>
+<li>OrthoCenter(point1, point2, point3)</li>
+<li>OrthoCenter(triangle)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Orthocenter.html">orthocenter</a> (intersection of the three <a class="reference" href="http://mathworld.wolfram.com/Altitude.html">altitude</a> s), of a <a class="reference" href="http://mathworld.wolfram.com/Triangle.html">triangle</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">points distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">undefined</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Orthocenter.html">http://mathworld.wolfram.com/Orthocenter.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id6" id="class-centroid" name="class-centroid">class Centroid</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Center(point1, point2, point3, CENTROID):</li>
+<li>Center(triangle. CENTROID):</li>
+<li>Centroid(point1, point2, point3):</li>
+<li>Centroid(triangle):</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">points distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">the LineDivider with ratio=1/3</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/TriangleCentroid.html">triangle centroid</a> (<a class="reference" href="http://mathworld.wolfram.com/GeometricCentroid.html">center of mass</a>)  of a <a class="reference" href="http://mathworld.wolfram.com/Triangle.html">triangle</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/TriangleCentroid.html">http://mathworld.wolfram.com/TriangleCentroid.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id7" id="class-incenter" name="class-incenter">class InCenter</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Center(point1, point2, point3,INCENTER)</li>
+<li>Center(triangle, INCENTER)</li>
+<li>InCenter(point1, point2, point3)</li>
+<li>InCenter(triangle)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Incenter.html">incenter</a>, (center of the <a class="reference" href="http://mathworld.wolfram.com/Incircle.html">incircle</a> ) of a <a class="reference" href="http://mathworld.wolfram.com/Triangle.html">triangle</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">points distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">undefined</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Incenter.html">http://mathworld.wolfram.com/Incenter.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id8" id="class-excenter" name="class-excenter">class ExCenter</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Center(point1, point2, point3, EXCENTER) #order significant</li>
+<li>Center(triangle, ExCENTER)  #triangle vertex order significant</li>
+<li>ExCenter(point1, point2, point3) #order significant</li>
+<li>ExCenter(triangle) #triangle vertex order significant</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">an <a class="reference" href="http://mathworld.wolfram.com/Excenter.html">excenter</a>, (<a class="reference" href="http://mathworld.wolfram.com/Center.html">center</a> of one of the 3 <a class="reference" href="http://mathworld.wolfram.com/Excircle.html">excircle</a> s) of a <a class="reference" href="http://mathworld.wolfram.com/Triangle.html">triangle</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">points distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">undefined</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Excenter.html">http://mathworld.wolfram.com/Excenter.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id9" id="class-tetracenter" name="class-tetracenter">class TetraCenter</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Center(point1, point2, point3,point4)</li>
+<li>TetraCenter(point1, point2, point3,point4)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Center.html">center</a> of <a class="reference" href="http://mathworld.wolfram.com/Circumsphere.html">circumsphere</a> of the (possibly irregular) <a class="reference" href="http://mathworld.wolfram.com/Tetrahedron.html">tetrahedron</a>
+defined by four points</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">points distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">undefined</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://astronomy.swin.edu.au/~pbourke/geometry/spherefrom4/">http://astronomy.swin.edu.au/~pbourke/geometry/spherefrom4/</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

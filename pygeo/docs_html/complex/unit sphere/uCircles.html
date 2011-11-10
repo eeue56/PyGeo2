@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>uCircle(...)</title>
+    <link rel="stylesheet" href="../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../index.html">Docs</a></li> <li>></li> <li><a href="../index.html">Complex Numbers</a></li> <li>></li> <li><a href="index.html">Riemann sphere</a></li> <li>></li> <li>ucircles</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../quickstart.html">QuickStart</a>
+</li>
+<li><a href="../../real/index.html">Real 3d Space</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Complex Numbers</a></strong>
+</li>
+<li><a href="../complex plane/index.html">Complex Plane</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Riemann sphere</a></strong>
+</li>
+<li><a href="unit_sphere_abstracts.html">uSphere Abstracts</a>
+</li>
+<li><a href="uPoints.html">upoints</a>
+</li>
+<li><a href="uSliders.html">usliders</a>
+</li>
+<li><a href="uAniPoints.html">uanipoints</a>
+</li>
+<li><a href="uCircles.html">ucircles</a>
+</li>
+<li><a href="uSpheres.html">uspheres</a>
+</li>
+<li><a href="uCirclepencils.html">ucirclepencils</a>
+</li>
+<li><a href="uTransform.html">utransforms</a>
+</li>
+</div>
+</div>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="ucircle">
+<h1 class="title"><strong>uCircle(...)</strong></h1>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#def-ucircle" id="id2" name="id2">def uCircle</a><ul>
+<li><a class="reference" href="#class-ucircumcircle" id="id3" name="id3">class uCircumCircle</a></li>
+<li><a class="reference" href="#class-ucirclefromnormal" id="id4" name="id4">class uCircleFromNormal</a></li>
+<li><a class="reference" href="#class-upolarcircle" id="id5" name="id5">class uPolarCircle</a></li>
+<li><a class="reference" href="#class-z-to-ucircle" id="id6" name="id6">class z_to_uCircle</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Objects derived from the <a class="reference" href="unit_sphere_abstracts.html#class-ucircle">_uCircle</a> abstract class, representing
+a <a class="reference" href="http://mathworld.wolfram.com/SphericSection.html">spheric section</a> of the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a>.</p>
+<div class="section">
+<h1><a class="toc-backref" href="#id2" id="def-ucircle" name="def-ucircle">def uCircle</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>uCircle(uPoint,uPoint,uPoint);  calls: <a class="reference" href="#class-ucircumcircle">class uCircumCircle</a></li>
+<li>uCircle(point,point);  calls: <a class="reference" href="#class-ucirclefromnormal">class uCircleFromNormal</a></li>
+<li>uCircle(point);  calls: <a class="reference" href="#class-upolarcircle">class uPolarCircle</a></li>
+<li>uCircle(zCircle);  calls: <a class="reference" href="#class-z-to-ucircle">class z_to_uCircle</a></li>
+<li>uCircle(zLine);  calls: <a class="reference" href="#class-z-to-ucircle">class z_to_uCircle</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">A <a class="reference" href="http://mathworld.wolfram.com/SphericSection.html">spheric section</a> of the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/SphericSection.html">http://mathworld.wolfram.com/SphericSection.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section">
+<h2><a class="toc-backref" href="#id3" id="class-ucircumcircle" name="class-ucircumcircle">class uCircumCircle</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>uCircle(uPoint,uPoint,uPoint)</li>
+<li>uCircumCircle(uPoint,uPoint,uPoint)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/SphericSection.html">spheric section</a> through 3 given points on the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a> .</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Circumcircle.html">http://mathworld.wolfram.com/Circumcircle.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id4" id="class-ucirclefromnormal" name="class-ucirclefromnormal">class uCircleFromNormal</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>uCircle(point,point)</li>
+<li>uCircleFromNormal(point,point)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/SphericSection.html">spheric section</a> of the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a> cut by the <a class="reference" href="http://mathworld.wolfram.com/Plane.html">plane</a>
+at the initial point argument that is <a class="reference" href="http://mathworld.wolfram.com/NormalVector.html">normal</a>
+to the direction determined by the first and
+second point arguments</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">plane from <a class="reference" href="http://mathworld.wolfram.com/NormalVector.html">normal</a> cuts the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/NormalVector.html">http://mathworld.wolfram.com/NormalVector.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id5" id="class-upolarcircle" name="class-upolarcircle">class uPolarCircle</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>uCircle(point)</li>
+<li>uPolarCircle(point)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/SphericSection.html">spheric section</a> of <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a> cut by the <a class="reference" href="http://mathworld.wolfram.com/Plane.html">plane</a>
+<a class="reference" href="http://mathworld.wolfram.com/Polar.html">polar</a> to the point argument with respect
+to the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">point exterior to the unit sphere</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Polar.html">http://mathworld.wolfram.com/Polar.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id6" id="class-z-to-ucircle" name="class-z-to-ucircle">class z_to_uCircle</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>uCircle(zCircle)</li>
+<li>uCircle(zLine)</li>
+<li>z_to_uCircle(zCircle)</li>
+<li>z_to_uCircle(zLine)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/StereographicProjection.html">stereographic projection</a> circle of the given circle or line of the
+<a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> onto the  <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a>.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/StereographicProjection.html">http://mathworld.wolfram.com/StereographicProjection.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

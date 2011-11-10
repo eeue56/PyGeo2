@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>Geometric Objects of the Riemann Sphere</title>
+    <link rel="stylesheet" href="../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../index.html">Docs</a></li> <li>></li> <li><a href="../index.html">Complex Numbers</a></li> <li>></li> <li>Riemann sphere</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../quickstart.html">QuickStart</a>
+</li>
+<li><a href="../../real/index.html">Real 3d Space</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Complex Numbers</a></strong>
+</li>
+<li><a href="../complex plane/index.html">Complex Plane</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Riemann sphere</a></strong>
+</li>
+<li><a href="unit_sphere_abstracts.html">uSphere Abstracts</a>
+</li>
+<li><a href="uPoints.html">upoints</a>
+</li>
+<li><a href="uSliders.html">usliders</a>
+</li>
+<li><a href="uAniPoints.html">uanipoints</a>
+</li>
+<li><a href="uCircles.html">ucircles</a>
+</li>
+<li><a href="uSpheres.html">uspheres</a>
+</li>
+<li><a href="uCirclepencils.html">ucirclepencils</a>
+</li>
+<li><a href="uTransform.html">utransforms</a>
+</li>
+</div>
+</div>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="geometric-objects-of-the-riemann-sphere">
+<h1 class="title">Geometric Objects of the Riemann Sphere</h1>
+<div class="indexblock">
+<h3>Pages</h3>
+<ul><li><a href="unit_sphere_abstracts.html">uSphere Abstracts</a><p>classes defining interfaces for PyGeo geometric primitives associated with
+the  unit (Riemann) sphere representing the extended complex plane</p>
+</li>
+<li><a href="uPoints.html">uPoint(...)</a><p>Objects derived from the <a class="reference" href="unit_sphere_abstracts.html#class-upoint">_uPoint</a> abstract class,
+with its position in space constrained to the surface of the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a> ,
+and determined by reference to its numeric, geometric, and/or constant arguments</p>
+</li>
+<li><a href="uSliders.html">uSlider(...)</a><p>object derived from the <a class="reference" href="unit_sphere_abstracts.html#class-uPoint">_uPoint</a> abstract class,
+which can picked and moved constrained to the surface of the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a>
+or a given geometric object on the sphere.</p>
+</li>
+<li><a href="uAniPoints.html">uAniPoint(...)</a><p>object derived from the <a class="reference" href="unit_sphere_abstracts.html#class-uPoint">_uPoint</a> abstract class,
+which moves at each update cycle, constrained to the surface of the
+<a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a> or a given geometric object on the sphere.</p>
+</li>
+<li><a href="uCircles.html">uCircle(...)</a><p>objects derived from the <a class="reference" href="unit_sphere_abstracts.html#class-ucircle">_uCircle</a> abstract class, representing
+a <a class="reference" href="http://mathworld.wolfram.com/SphericSection.html">spheric section</a> of the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a> .</p>
+</li>
+<li><a href="uSpheres.html">uSphere(...)</a><p>objects derived from the <a class="reference" href="unit_sphere_abstracts.html#class-usphere">_uSphere</a> abstract class representing the
+origin center unit <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a>  as a map of the completed <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> .</p>
+</li>
+<li><a href="uCirclepencils.html">uCirclePencil(...)</a><p>objects derived from the <a class="reference" href="unit_sphere_abstracts.html#class-ucirclepencil">_uCirclePencil</a> abstract class, representing
+an array of circles on the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a> .</p>
+</li>
+<li><a href="uTransform.html">uTransform(...)</a><p>objects derived from the <a class="reference" href="unit_sphere_abstracts.html#class-utranformation">_uTransformation</a> abstract class, representing
+a defined transformation of or onto the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a></p>
+</li></ul>
+
+</div></div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>zCirclePencil(...)</title>
+    <link rel="stylesheet" href="../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../index.html">Docs</a></li> <li>></li> <li><a href="../index.html">Complex Numbers</a></li> <li>></li> <li><a href="index.html">Complex Plane</a></li> <li>></li> <li>zcirclepencils</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../quickstart.html">QuickStart</a>
+</li>
+<li><a href="../../real/index.html">Real 3d Space</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Complex Numbers</a></strong>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Complex Plane</a></strong>
+</li>
+<li><a href="complex_plane_abstracts.html">zPlane Abstracts</a>
+</li>
+<li><a href="zPoints.html">zpoints</a>
+</li>
+<li><a href="zfree_point.html">zfreepoint</a>
+</li>
+<li><a href="zsliders.html">zsliders</a>
+</li>
+<li><a href="z_anipoints.html">zanipoints</a>
+</li>
+<li><a href="z_lines.html">zlines</a>
+</li>
+<li><a href="z_circles.html">zcircles</a>
+</li>
+<li><a href="z_pointpencils.html">zpointarrays</a>
+</li>
+<li><a href="z_linearrays.html">zlinearrays</a>
+</li>
+<li><a href="z_circlepencils.html">zcirclepencils</a>
+</li>
+<li><a href="mobtransforms.html">ztransforms</a>
+</li>
+</div>
+<li><a href="../unit sphere/index.html">Riemann sphere</a>
+</li>
+</div>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="zcirclepencil">
+<h1 class="title"><strong>zCirclePencil(...)</strong></h1>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#def-zcirclepencil" id="id3" name="id3">def zCirclePencil</a><ul>
+<li><a class="reference" href="#class-zcircles" id="id4" name="id4">class zCircles</a></li>
+<li><a class="reference" href="#class-u-to-zcirclepencil" id="id5" name="id5">class u_to_zcirclePencil</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Objects derived from the <a class="reference" href="complex_plane_abstracts.html#class-zcirclepencil">_zCirclePencil</a> abstract class,
+representing an array of <cite>complex circles</cite> with determined positions
+on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></p>
+<div class="section">
+<h1><a class="toc-backref" href="#id3" id="def-zcirclepencil" name="def-zcirclepencil">def zCirclePencil</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zCirclePencil(zcircle1,zcircle2); calls: <a class="reference" href="#class-zcircles">class zCircles</a></li>
+<li>zCirclePencil(u_circlepencil); calls: <a class="reference" href="#class-u-to-zcirclepencil">class u_to_zCirclePencil</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first last">An instance of an object derived from the <a class="reference" href="complex_plane_abstracts.html#class-zcirclepencil">_zCirclePencil</a> abstract class,
+representing an array of <cite>complex circles</cite> with determined positions
+on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section">
+<h2><a class="toc-backref" href="#id4" id="class-zcircles" name="class-zcircles">class zCircles</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zCirclePencil(zcircle1,zcircle2)</li>
+<li>zCircles(zcircle1,zcircle2)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">pencil of <a class="reference" href="http://www.ies.co.jp/math/java/comp/cplcircle/cplcircle.html">complex circle</a> s generated by the given <a class="reference" href="http://www.ies.co.jp/math/java/comp/cplcircle/cplcircle.html">complex circle</a> s,
+and through the points of intersection of the circles of the generators
+if the intersection exists (i.e. the pencil is hyperbolic)</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://en.wikipedia.org/wiki/User:Pmurray_bigpond.com/Geometry_of_Complex_Numbers">http://en.wikipedia.org/wiki/User:Pmurray_bigpond.com/Geometry_of_Complex_Numbers</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id5" id="class-u-to-zcirclepencil" name="class-u-to-zcirclepencil">class u_to_zcirclePencil</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zCirclePencil(u_circlepencil)</li>
+<li>u_to_zcirclePencil(u_circlepencil)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">pencil of circles (inclusive of lines) on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a>
+generated by the <a class="reference" href="http://mathworld.wolfram.com/StereographicProjection.html">stereographic projection</a>
+of a pencil of <a class="reference" href="http://mathworld.wolfram.com/SphericSection.html">spheric sections</a> of the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://www.uwgb.edu/dutchs/STRUCTGE/stereo1.htm">http://www.uwgb.edu/dutchs/STRUCTGE/stereo1.htm</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

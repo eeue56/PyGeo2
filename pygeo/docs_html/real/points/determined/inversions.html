@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>Inversion(...)</title>
+    <link rel="stylesheet" href="../../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../../index.html">Docs</a></li> <li>></li> <li><a href="../../index.html">Real 3d Space</a></li> <li>></li> <li><a href="../index.html">Points</a></li> <li>></li> <li><a href="index.html">Determined</a></li> <li>></li> <li>inversions</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../../quickstart.html">QuickStart</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Real 3d Space</a></strong>
+</li>
+<li><a href="../../real_abstracts.html">Real Abstracts</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Points</a></strong>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Determined</a></strong>
+</li>
+<li><a href="base_point.html">point</a>
+</li>
+<li><a href="intersects.html">intersects</a>
+</li>
+<li><a href="centers.html">centers</a>
+</li>
+<li><a href="inversions.html">inversions</a>
+</li>
+<li><a href="reflections.html">reflections</a>
+</li>
+<li><a href="dividers.html">dividers</a>
+</li>
+<li><a href="foot_points.html">foot points</a>
+</li>
+<li><a href="antipodals.html">antipodals</a>
+</li>
+</div>
+<li><a href="../pickable_animated/index.html">Pickable/Animated</a>
+</li>
+</div>
+<li><a href="../../lines/index.html">Lines</a>
+</li>
+<li><a href="../../circles.html">circles</a>
+</li>
+<li><a href="../../planes.html">planes</a>
+</li>
+<li><a href="../../spheres.html">spheres</a>
+</li>
+<li><a href="../../pointarrays.html">pointarrays</a>
+</li>
+<li><a href="../../curves.html">curves</a>
+</li>
+<li><a href="../../linearrays.html">linearrays</a>
+</li>
+<li><a href="../../planearray.html">planearray</a>
+</li>
+<li><a href="../../circlepencil.html">circlepencil</a>
+</li>
+<li><a href="../../transforms.html">transforms</a>
+</li>
+</div>
+<li><a href="../../../complex/index.html">Complex Numbers</a>
+</li>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="inversion">
+<h1 class="title"><strong>Inversion(...)</strong></h1>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#def-inversion" id="id3" name="id3">def Inversion</a><ul>
+<li><a class="reference" href="#class-circleinversion" id="id4" name="id4">class CircleInversion</a></li>
+<li><a class="reference" href="#class-sphereinversion" id="id5" name="id5">class SphereInversion</a></li>
+<li><a class="reference" href="#class-circlepole" id="id6" name="id6">class CirclePole</a></li>
+<li><a class="reference" href="#class-spherepole" id="id7" name="id7">class SpherePole</a></li>
+<li><a class="reference" href="#class-conicpole" id="id8" name="id8">class ConicPole</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Objects derived from the <a class="reference" href="../../real_abstracts.html#class-point">_Point</a> abstract class,
+with its position in space determined by its inversive relationship to a given
+geometric object</p>
+<hr class="docutils" />
+<div class="section">
+<h1><a class="toc-backref" href="#id3" id="def-inversion" name="def-inversion">def Inversion</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Inversion(point,circle);  calls: <a class="reference" href="#class-circleinversion">class CircleInversion</a></li>
+<li>Inversion(point,sphere);  calls: <a class="reference" href="#class-sphereinversion">class SphereInversion</a></li>
+<li>Inversion(line, circle);  calls: <a class="reference" href="#class-circlepole">class CirclePole</a></li>
+<li>Inversion(plane, sphere); calls: <a class="reference" href="#class-spherepole">class SpherePole</a></li>
+<li>Inversion(line, conic): calls: :calls: <a class="reference" href="#class-conicpole">class ConicPole</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">A point determined by a <a class="reference" href="http://mathworld.wolfram.com/InversiveGeometry.html">inversive</a> transformation with respect to a
+given geometric object</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/InversiveGeometry.html">http://mathworld.wolfram.com/InversiveGeometry.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section">
+<h2><a class="toc-backref" href="#id4" id="class-circleinversion" name="class-circleinversion">class CircleInversion</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Inversion(point,circle)</li>
+<li>CircleInversion(point, circle)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/InversePoints.html">inverse point</a> of a given <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a> with respect to a given <a class="reference" href="http://mathworld.wolfram.com/Coplanar.html">coplanar</a> <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">point and circle are <a class="reference" href="http://mathworld.wolfram.com/Coplanar.html">coplanar</a>; point not circle center</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None ;  point at [MAX,MAX,MAX]</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/InversePoints.html">http://mathworld.wolfram.com/InversePoints.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id5" id="class-sphereinversion" name="class-sphereinversion">class SphereInversion</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Inversion(point,sphere)</li>
+<li>SphereInversion(point,sphere)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a> of <a class="reference" href="http://mathworld.wolfram.com/Inversion.html">inversion</a> of a given point with respect
+to an <a class="reference" href="http://mathworld.wolfram.com/InversionSphere.html">inversive sphere</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">point not sphere center</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">point at [MAX,MAX,MAX]</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/InversionSphere.html">http://mathworld.wolfram.com/InversionSphere.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id6" id="class-circlepole" name="class-circlepole">class CirclePole</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Inversion(line,circle)</li>
+<li>CirclePole(line,circle)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Pole.html">pole</a> of a given <a class="reference" href="http://mathworld.wolfram.com/Line.html">line</a> with respect to a given <a class="reference" href="http://mathworld.wolfram.com/Coplanar.html">coplanar</a> <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">line and circle are <a class="reference" href="http://mathworld.wolfram.com/Coplanar.html">coplanar</a>; line not on circle center</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None ;  point at [MAX,MAX,MAX]</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/InversionPole.html">http://mathworld.wolfram.com/InversionPole.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id7" id="class-spherepole" name="class-spherepole">class SpherePole</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Inversion(plane,sphere)</li>
+<li>SpherePole(plane,sphere)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Pole.html">pole</a> of a given <a class="reference" href="http://mathworld.wolfram.com/Plane.html">plane</a> with respect to a given <a class="reference" href="http://mathworld.wolfram.com/Sphere.html">sphere</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">line not on sphere center</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">point at [MAX,MAX,MAX]</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/InversionPole.html">http://mathworld.wolfram.com/InversionPole.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id8" id="class-conicpole" name="class-conicpole">class ConicPole</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Inversion(line,conic)</li>
+<li>ConicPole(line,conic)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Pole.html">pole</a> of a given line with respect to a given <a class="reference" href="http://mathworld.wolfram.com/Coplanar.html">coplanar</a> <a class="reference" href="http://mathworld.wolfram.com/ConicSection.html">conic</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">line and conic are <a class="reference" href="http://mathworld.wolfram.com/Coplanar.html">coplanar</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/InversionPole.html">http://mathworld.wolfram.com/InversionPole.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

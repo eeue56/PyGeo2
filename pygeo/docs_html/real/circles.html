@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>Circle(...)</title>
+    <link rel="stylesheet" href="../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../index.html">Docs</a></li> <li>></li> <li><a href="index.html">Real 3d Space</a></li> <li>></li> <li>circles</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Docs</a></strong>
+</li>
+<li><a href="../quickstart.html">QuickStart</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Real 3d Space</a></strong>
+</li>
+<li><a href="real_abstracts.html">Real Abstracts</a>
+</li>
+<li><a href="points/index.html">Points</a>
+</li>
+<li><a href="lines/index.html">Lines</a>
+</li>
+<li><a href="circles.html">circles</a>
+</li>
+<li><a href="planes.html">planes</a>
+</li>
+<li><a href="spheres.html">spheres</a>
+</li>
+<li><a href="pointarrays.html">pointarrays</a>
+</li>
+<li><a href="curves.html">curves</a>
+</li>
+<li><a href="linearrays.html">linearrays</a>
+</li>
+<li><a href="planearray.html">planearray</a>
+</li>
+<li><a href="circlepencil.html">circlepencil</a>
+</li>
+<li><a href="transforms.html">transforms</a>
+</li>
+</div>
+<li><a href="../complex/index.html">Complex Numbers</a>
+</li>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="circle">
+<h1 class="title"><strong>Circle(...)</strong></h1>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#def-circle" id="id3" name="id3">def Circle</a><ul>
+<li><a class="reference" href="#class-centercircle" id="id4" name="id4">class CenterCircle</a></li>
+<li><a class="reference" href="#class-circumcircle" id="id5" name="id5">class CircumCircle</a></li>
+<li><a class="reference" href="#class-inscribedcircle" id="id6" name="id6">class InscribedCircle</a></li>
+<li><a class="reference" href="#class-exscribedcircle" id="id7" name="id7">class ExscribedCircle</a></li>
+<li><a class="reference" href="#class-orthocircle" id="id8" name="id8">class OrthoCircle</a></li>
+<li><a class="reference" href="#class-circleonplane" id="id9" name="id9">class CircleOnPlane</a></li>
+<li><a class="reference" href="#class-spherecircle" id="id10" name="id10">class SphereCircle</a></li>
+<li><a class="reference" href="#class-spheresintersect" id="id11" name="id11">class SpheresIntersect</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Objects derived from the <a class="reference" href="real_abstracts.html#class-circle">_Circle</a> abstract class representing
+the set of points in a plane that are equidistant from a given point</p>
+<div class="section">
+<h1><a class="toc-backref" href="#id3" id="def-circle" name="def-circle">def Circle</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Circle(point1,point2,point3); calls: <a class="reference" href="#class-centercircle">class CenterCircle</a></li>
+<li>Circle(point1,point2,point3,CENTER); calls: <a class="reference" href="#class-centercircle">class CenterCircle</a></li>
+<li>Circle(point1,point2,point3,CIRCUM); calls: <a class="reference" href="#class-circumcircle">class CircumCircle</a></li>
+<li>Circle(point1,point2,point3,INSCRIBED); calls: <a class="reference" href="#class-inscribedcircle">class InscribedCircle</a></li>
+<li>Circle(point1,point2,point3,EXSCRIBED); calls: <a class="reference" href="#class-exscribedcircle">class ExscribedCircle</a></li>
+<li>Circle(point1,point2,plane); calls: <a class="reference" href="#class-circleonplane">class CircleOnPlane</a></li>
+<li>Circle(circle,point);                   calls: <a class="reference" href="#class-orthocircle">class OrthoCircle</a></li>
+<li>Circle(sphere,plane);                   calls: <a class="reference" href="#class-spherecircle">class SphereCircle</a></li>
+<li>Circle(sphere1,sphere2);                calls: <a class="reference" href="#class-spheresintersect">class SpheresIntersect</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first last">an instance of an object derived from the <a class="reference" href="real_abstracts.html#class-circle">_Circle</a> abstract class, determined
+uniquely by reference to its arguments</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Keyword arguments</strong>: see <a class="reference" href="real_abstracts.html#class-circle">_Circle</a></p>
+<div class="section">
+<h2><a class="toc-backref" href="#id4" id="class-centercircle" name="class-centercircle">class CenterCircle</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Circle(point1,point2,point3)</li>
+<li>Circle(point1,point2,point3,CENTER)</li>
+<li>CenterCircle(point1,point2,point3)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> on the <a class="reference" href="http://mathworld.wolfram.com/Plane.html">plane</a> determined by the 3 point arguments, with 'point1' at <a class="reference" href="http://mathworld.wolfram.com/Center.html">center</a>
+and 'point2' on <a class="reference" href="http://mathworld.wolfram.com/Circumference.html">circumference</a>.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">condition:</th><td class="field-body"><p class="first">points distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Circle.html">http://mathworld.wolfram.com/Circle.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id5" id="class-circumcircle" name="class-circumcircle">class CircumCircle</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Circle(point1,point2,point3, CIRCUM)</li>
+<li>CircumCircle(point1,point2,point3)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> that pass through the 3 point arguments</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">condition:</th><td class="field-body"><p class="first">points distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Circumcircle.html">http://mathworld.wolfram.com/Circumcircle.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id6" id="class-inscribedcircle" name="class-inscribedcircle">class InscribedCircle</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Circle(point1,point2,point3, INSCRIBED)</li>
+<li>InscribedCircle(point1,point2,point3)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> <a class="reference" href="http://mathworld.wolfram.com/Inscribed.html">inscribed</a> in the <a class="reference" href="http://mathworld.wolfram.com/Triangle.html">triangle</a> connecting the 3 <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a> arguments</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">condition:</th><td class="field-body"><p class="first">points distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Incircle.html">http://mathworld.wolfram.com/Incircle.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id7" id="class-exscribedcircle" name="class-exscribedcircle">class ExscribedCircle</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Circle(point1,point2,point3, EXSCRIBED)</li>
+<li>ExscribedCircle(point1,point2,point3)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> external and tangent to the sides of the <a class="reference" href="http://mathworld.wolfram.com/Triangle.html">triangle</a> connecting the 3
+point arguments, and opposite to the vertex referenced as 'point1'.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">condition:</th><td class="field-body"><p class="first">points distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Excircle.html">http://mathworld.wolfram.com/Excircle.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id8" id="class-orthocircle" name="class-orthocircle">class OrthoCircle</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Circle(circle,point)</li>
+<li>OrthoCircle(circle,point)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> with <a class="reference" href="http://mathworld.wolfram.com/Center.html">center</a> at the <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a> argument and <a class="reference" href="http://mathworld.wolfram.com/Orthogonal.html">orthogonal</a> to the <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> argument</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">point and circle are coplanar; point exterior to circle</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None; None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/OrthogonalCircles.html">http://mathworld.wolfram.com/OrthogonalCircles.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id9" id="class-circleonplane" name="class-circleonplane">class CircleOnPlane</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Circle(point1,point2,plane)</li>
+<li>CircleOnPlane(point1,point2,plane)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> on the given <a class="reference" href="http://mathworld.wolfram.com/Plane.html">plane</a> with 'point1' at <a class="reference" href="http://mathworld.wolfram.com/Center.html">center</a> and radius equal
+to the distance between point1 and point2</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">points on plane</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Circle.html">http://mathworld.wolfram.com/Circle.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id10" id="class-spherecircle" name="class-spherecircle">class SphereCircle</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Circle(sphere,plane);</li>
+<li>SphereCircle(sphere,plane);</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> at the <a class="reference" href="http://mathworld.wolfram.com/Circumference.html">circumference</a> of the disk determined by the <a class="reference" href="http://mathworld.wolfram.com/CrossSection.html">cross section</a>
+the given sphere and the given plane</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">sphere and plane intersection is real</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/CrossSection.html">http://mathworld.wolfram.com/CrossSection.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id11" id="class-spheresintersect" name="class-spheresintersect">class SpheresIntersect</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>Circle(sphere1,sphere2)</li>
+<li>SpheresIntersect(circle,point)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> determined by the <a class="reference" href="http://mathworld.wolfram.com/Intersection.html">intersection</a> of the 2 <a class="reference" href="http://mathworld.wolfram.com/Sphere.html">sphere</a> arguments</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">spheres' intersection is real, spheres are not concentric</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None; None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Sphere-SphereIntersection.html">http://mathworld.wolfram.com/Sphere-SphereIntersection.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>Geometric Objects on the Complex Plane</title>
+    <link rel="stylesheet" href="../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../index.html">Docs</a></li> <li>></li> <li><a href="../index.html">Complex Numbers</a></li> <li>></li> <li>Complex Plane</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../quickstart.html">QuickStart</a>
+</li>
+<li><a href="../../real/index.html">Real 3d Space</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Complex Numbers</a></strong>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Complex Plane</a></strong>
+</li>
+<li><a href="complex_plane_abstracts.html">zPlane Abstracts</a>
+</li>
+<li><a href="zPoints.html">zpoints</a>
+</li>
+<li><a href="zfree_point.html">zfreepoint</a>
+</li>
+<li><a href="zsliders.html">zsliders</a>
+</li>
+<li><a href="z_anipoints.html">zanipoints</a>
+</li>
+<li><a href="z_lines.html">zlines</a>
+</li>
+<li><a href="z_circles.html">zcircles</a>
+</li>
+<li><a href="z_pointpencils.html">zpointarrays</a>
+</li>
+<li><a href="z_linearrays.html">zlinearrays</a>
+</li>
+<li><a href="z_circlepencils.html">zcirclepencils</a>
+</li>
+<li><a href="mobtransforms.html">ztransforms</a>
+</li>
+</div>
+<li><a href="../unit sphere/index.html">Riemann sphere</a>
+</li>
+</div>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="geometric-objects-on-the-complex-plane">
+<h1 class="title">Geometric Objects on the Complex Plane</h1>
+<div class="indexblock">
+<h3>Pages</h3>
+<ul><li><a href="complex_plane_abstracts.html">zPlane Abstracts</a><blockquote>
+classes defining interfaces for PyGeo geometric primitives associated with
+the geometry of the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></blockquote>
+</li>
+<li><a href="zPoints.html">zPoint(...)</a><p>object derived from the <a class="reference" href="complex_plane_abstracts.html#class-zpoint">_zPoint</a> abstract class,
+representing a point of the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> , with its position determined with
+respect to its numeric, geometric, and/or constant arguments</p>
+</li>
+<li><a href="zfree_point.html">zFreePoint(...)</a><p>pickable point derived from the <a class="reference" href="complex_plane_abstracts.html#class-zpoint">_zPoint</a> abstract class that can be
+freely moved on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> , with its initial position in space
+determined by (real,imag) coordinate arguments</p>
+</li>
+<li><a href="zsliders.html">zSlider(...)</a><p>pickable points derived from the <a class="reference" href="complex_plane_abstracts.html#class-zpoint">_zPoint</a> abstract class
+constrained to move on a given geometric object of the
+<a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></p>
+</li>
+<li><a href="z_anipoints.html">zAniPoint(...)</a><p>points derived from the <a class="reference" href="complex_plane_abstracts.html#class-zpoint">_zPoint</a> abstract class
+which move in relationship to a given geometric object
+of the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> at each update cycle</p>
+</li>
+<li><a href="z_lines.html">zLine(...)</a><p>objects derived from the <a class="reference" href="complex_plane_abstracts.html#class-zline">_zLine</a> abstract class,
+representing an infinite line on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> .</p>
+</li>
+<li><a href="z_circles.html">zCircle(...)</a><p>Objects derived from the <a class="reference" href="complex_plane_abstracts.html#class-zcircle">_zCircle</a> abstract class representing
+the set of points of the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> that are equidistant from a given point</p>
+</li>
+<li><a href="z_pointpencils.html">zPointArray(...)</a><p>objects derived from the <a class="reference" href="complex_plane_abstracts.html#class-zpointarray">_zPointArray</a> abstract class,
+representing an array of points with determined positions
+in the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></p>
+</li>
+<li><a href="z_linearrays.html">zLineArray(...)</a><p>objects derived from the <a class="reference" href="complex_plane_abstracts.html#class-zlinearray">_zLineArray</a> abstract class,
+representing an array of lines with determined positions
+on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></p>
+</li>
+<li><a href="z_circlepencils.html">zCirclePencil(...)</a><p>objects derived from the <a class="reference" href="complex_plane_abstracts.html#class-zcirclepencil">_zCirclePencil</a> abstract class,
+representing an array of <cite>complex circles</cite> with determined positions
+on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></p>
+</li>
+<li><a href="mobtransforms.html">mobTransform(...)</a><p>objects derived from the <a class="reference" href="complex_plane_abstracts.html#class-ztransformation">_zTransformation</a> abstract class
+represented a defined <a class="reference" href="http://mathworld.wolfram.com/LinearFractionalTransformation.html">linear fractional transformation</a> of a
+given list of geometric objects of the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></p>
+<blockquote>
+</blockquote>
+</li></ul>
+
+</div></div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

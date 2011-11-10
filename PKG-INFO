@@ -1,0 +1,29 @@
+Metadata-Version: 1.0
+Name: PyGeo
+Version: 1.0a1
+Summary: PyGeo - 3d Dynamic Geometry Toolkit
+Home-page: http://pygeo.sourceforge.net
+Author: Arthur J. Siegel
+Author-email: ajsiegel@optonline.com
+License: GPL
+Description: 
+        PyGeo is a 3d dynamic geometry toolkit written in Python, with dependencies on
+        Numeric Python, which provides fast multi-dimensional array processing and
+        VPython, which provides the 3d graphics rendering.
+        
+Platform: OS-independent
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Requires :: visual
+Classifier: Requires :: Numeric
+Classifier: Requires-Python :: >=2.3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Copyright:: Arthur Siegel, 2001
+Classifier: Natural Language :: English
+Classifier: Topic :: Education
+Classifier: Topic :: Education :: Computer Aided Instruction (CAI)
+Classifier: Topic :: Scientific/Engineering :: MathematicsOperating System :: POSIXOperating System :: Microsoft :: Windows

@@ -1,0 +1,1084 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>Real Abstracts</title>
+    <link rel="stylesheet" href="../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../index.html">Docs</a></li> <li>></li> <li><a href="index.html">Real 3d Space</a></li> <li>></li> <li>Real Abstracts</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Docs</a></strong>
+</li>
+<li><a href="../quickstart.html">QuickStart</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Real 3d Space</a></strong>
+</li>
+<li><a href="real_abstracts.html">Real Abstracts</a>
+</li>
+<li><a href="points/index.html">Points</a>
+</li>
+<li><a href="lines/index.html">Lines</a>
+</li>
+<li><a href="circles.html">circles</a>
+</li>
+<li><a href="planes.html">planes</a>
+</li>
+<li><a href="spheres.html">spheres</a>
+</li>
+<li><a href="pointarrays.html">pointarrays</a>
+</li>
+<li><a href="curves.html">curves</a>
+</li>
+<li><a href="linearrays.html">linearrays</a>
+</li>
+<li><a href="planearray.html">planearray</a>
+</li>
+<li><a href="circlepencil.html">circlepencil</a>
+</li>
+<li><a href="transforms.html">transforms</a>
+</li>
+</div>
+<li><a href="../complex/index.html">Complex Numbers</a>
+</li>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="abstract-classes-real-space">
+<h1 class="title"><strong>Abstract Classes - Real Space</strong></h1>
+<p><strong>classes defining interfaces for PyGeo geometric primitives of real 3d space</strong></p>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#class-element" id="id1" name="id1">class Element</a></li>
+<li><a class="reference" href="#class-point" id="id2" name="id2">class _Point</a></li>
+<li><a class="reference" href="#class-freeposition" id="id3" name="id3">class _FreePosition</a></li>
+<li><a class="reference" href="#class-line" id="id4" name="id4">class _Line</a></li>
+<li><a class="reference" href="#class-plane" id="id5" name="id5">class _Plane</a></li>
+<li><a class="reference" href="#class-circle" id="id6" name="id6">class _Circle</a></li>
+<li><a class="reference" href="#class-sphere" id="id7" name="id7">class _Sphere</a></li>
+<li><a class="reference" href="#class-pointarray" id="id8" name="id8">class _PointArray</a></li>
+<li><a class="reference" href="#class-linearray" id="id9" name="id9">class _LineArray</a></li>
+<li><a class="reference" href="#class-planearray" id="id10" name="id10">class _PlaneArray</a></li>
+<li><a class="reference" href="#class-circlepencil" id="id11" name="id11">class _CirclePencil</a></li>
+<li><a class="reference" href="#class-transformation" id="id12" name="id12">class _Transformation</a></li>
+</ul>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id1" id="class-element" name="class-element">class Element</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">the abstract class from which all PyGeo geometric objects derive</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><table border="1" class="first last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">color</p>
+</td>
+<td><p class="first last">drawn color of object</p>
+</td>
+<td><p class="first last">list of 3 numbers</p>
+</td>
+<td><p class="first last">[0,0,0] (BLACK)</p>
+</td>
+</tr>
+<tr><td><p class="first last">level</p>
+</td>
+<td><p class="first last">visibility &quot;level&quot; - see GUI</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">1</p>
+</td>
+</tr>
+<tr><td><p class="first last">trace</p>
+</td>
+<td><p class="first last">toggle for tracing function</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+<tr><td><p class="first last">texture</p>
+</td>
+<td><p class="first last">texture for Povray output</p>
+</td>
+<td><p class="first last">string</p>
+</td>
+<td><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id2" id="class-point" name="class-point">class _Point</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an O dimensional object with a defined position in space.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a> , base.Position3, base.vdraw.Point</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Point.html">http://mathworld.wolfram.com/Point.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>x: x coord</li>
+<li>y: y coord</li>
+<li>z: z coord</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords: from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">pointsize</p>
+</td>
+<td><p class="first last">size of drawn point</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.5</p>
+</td>
+</tr>
+<tr><td><p class="first last">label</p>
+</td>
+<td><p class="first last">label rendered for point</p>
+</td>
+<td><p class="first last">string</p>
+</td>
+<td><p class="first last">None</p>
+</td>
+</tr>
+<tr><td><p class="first last">tracewidth</p>
+</td>
+<td><p class="first last">width of trace curve</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">pointsize/2</p>
+</td>
+</tr>
+<tr><td><p class="first last">tracecolor</p>
+</td>
+<td><p class="first last">color of trace curve</p>
+</td>
+<td><p class="first last">list of 3 numbers</p>
+</td>
+<td><p class="first last">color</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontsize</p>
+</td>
+<td><p class="first last">fontsize of label</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">NORMALFONT</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontcolor</p>
+</td>
+<td><p class="first last">color of label font</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">BLACK</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontXoffset</p>
+</td>
+<td><p class="first last">horizontal offset of label</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">pointsize/10.+ 3.0</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontYoffset</p>
+</td>
+<td><p class="first last">vertical offset of label</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">pointsize/10.+ 3.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id3" id="class-freeposition" name="class-freeposition">class _FreePosition</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an O dimensional object which can be picked and moved through the scene
+display interface.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-point">class _Point</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Point.html">http://mathworld.wolfram.com/Point.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>x: x coord</li>
+<li>y: y coord</li>
+<li>z: z coord</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords: from <a class="reference" href="#class-element">class Element</a> :</p>
+<p class="last">inherited keywords: from <a class="reference" href="#class-point">class _Point</a> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id4" id="class-line" name="class-line">class _Line</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an 1 dimensional object representing &quot;breathless length&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a> ,base.vdraw.Line</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Line.html">http://mathworld.wolfram.com/Line.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>p1: point on line</li>
+<li>p2: point on line</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="23%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">linewidth</p>
+</td>
+<td><p class="first last">width of drawn line</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.2</p>
+</td>
+</tr>
+<tr><td><p class="first last">label</p>
+</td>
+<td><p class="first last">label rendered for point</p>
+</td>
+<td><p class="first last">string</p>
+</td>
+<td><p class="first last">None</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontsize</p>
+</td>
+<td><p class="first last">fontsize of label</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">NORMALFONT</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontcolor</p>
+</td>
+<td><p class="first last">color of label font</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">BLACK</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontXoffset</p>
+</td>
+<td><p class="first last">horizontal offset of label</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">pointsize/10.+ 3.0</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontYoffset</p>
+</td>
+<td><p class="first last">vertical offset of label</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">pointsize/10.+ 3.0</p>
+</td>
+</tr>
+<tr><td><p class="first last">label_ratio</p>
+</td>
+<td><p class="first last">relative position of label</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.5 (midpoint)</p>
+</td>
+</tr>
+<tr><td><p class="first last">show_normal</p>
+</td>
+<td><p class="first last">draw line normal?</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id5" id="class-plane" name="class-plane">class _Plane</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">a 2 dimensional surface spanned by two linearly independent vectors</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a>  ,base.vdraw.Plane</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Plane.html">http://mathworld.wolfram.com/Plane.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>_u : the unit normal</li>
+<li>_d : the distance from origin</li>
+<li>_s : unit vector perp to normal</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="15%" />
+<col width="35%" />
+<col width="23%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">style</p>
+</td>
+<td><p class="first last">drawing style</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">LINES</p>
+</td>
+</tr>
+<tr><td><p class="first last">linewidth</p>
+</td>
+<td><p class="first last">width of drawn lines</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.02</p>
+</td>
+</tr>
+<tr><td><p class="first last">scale</p>
+</td>
+<td><p class="first last">drawing scale</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">1</p>
+</td>
+</tr>
+<tr><td><p class="first last">show_normal</p>
+</td>
+<td><p class="first last">draw normal</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+<tr><td><p class="first last">normal_width</p>
+</td>
+<td><p class="first last">width of drawn normal</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.4</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id6" id="class-circle" name="class-circle">class _Circle</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">the set of points in a <a class="reference" href="http://mathworld.wolfram.com/Plane.html">plane</a> that are equidistant from a given <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a> , base.vdraw.Circle</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Circle.html">http://mathworld.wolfram.com/Circle.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>_u : the unit normal of the circle's plane</li>
+<li>_d : the distance from origin of the circle's plane</li>
+<li>_s : unit vector perp to normal of the circle's plane</li>
+<li>_center: the circle's center point</li>
+<li>_cpoint: a point of the circle's circumference</li>
+<li>_radius: the circle's radius</li>
+<li>_radiusSquared: the square of circle's radius</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="15%" />
+<col width="35%" />
+<col width="23%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">style</p>
+</td>
+<td><p class="first last">drawing style</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">LINES</p>
+</td>
+</tr>
+<tr><td><p class="first last">linewidth</p>
+</td>
+<td><p class="first last">width of drawn lines</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.2</p>
+</td>
+</tr>
+<tr><td><p class="first last">precision</p>
+</td>
+<td><p class="first last">drawing precision</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">40</p>
+</td>
+</tr>
+<tr><td><p class="first last">show_normal</p>
+</td>
+<td><p class="first last">draw normal</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+<tr><td><p class="first last">normal_width</p>
+</td>
+<td><p class="first last">width of drawn normal</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.4</p>
+</td>
+</tr>
+<tr><td><p class="first last">fixed</p>
+</td>
+<td><p class="first last">fix to initial radius</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id7" id="class-sphere" name="class-sphere">class _Sphere</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">the set of points in <a class="reference" href="http://mathworld.wolfram.com/EuclideanSpace.html">Euclidian space</a> that are equidistant from a given <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a> , base.vdraw.Sphere</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Sphere.html">http://mathworld.wolfram.com/Sphere.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>_center  the sphere's center point</li>
+<li>_cpoint  a point on the sphere's circumference</li>
+<li>_radius: the sphere's radius</li>
+<li>_radiusSquared: the square of the sphere's radius</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="23%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">style</p>
+</td>
+<td><p class="first last">drawing style</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">LINES</p>
+</td>
+</tr>
+<tr><td><p class="first last">linewidth</p>
+</td>
+<td><p class="first last">width of drawn lines</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.1</p>
+</td>
+</tr>
+<tr><td><p class="first last">precision</p>
+</td>
+<td><p class="first last">drawing precision</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">10</p>
+</td>
+</tr>
+<tr><td><p class="first last">fixed</p>
+</td>
+<td><p class="first last">fix to initial position</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id8" id="class-pointarray" name="class-pointarray">class _PointArray</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an <a class="reference" href="http://mathworld.wolfram.com/Array.html">array</a> of <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a> s with a defined geoemtric relationship</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Array.html">http://mathworld.wolfram.com/Array.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>points: the positioned points of the array</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="23%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">pointsize</p>
+</td>
+<td><p class="first last">size of drawn points</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.4</p>
+</td>
+</tr>
+<tr><td><p class="first last">density</p>
+</td>
+<td><p class="first last">points in array</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">25</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id9" id="class-linearray" name="class-linearray">class _LineArray</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an <a class="reference" href="http://mathworld.wolfram.com/Array.html">array</a> of <a class="reference" href="http://mathworld.wolfram.com/Line.html">line</a> s with a defined geoemtric relationship</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Array.html">http://mathworld.wolfram.com/Array.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>lines: the postioned lines of the array</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="23%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">linewidth</p>
+</td>
+<td><p class="first last">width of drawn lines</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">1</p>
+</td>
+</tr>
+<tr><td><p class="first last">density</p>
+</td>
+<td><p class="first last">lines in the array</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">25</p>
+</td>
+</tr>
+<tr><td><p class="first last">drawradius</p>
+</td>
+<td><p class="first last">lenght of drawn lines</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.5</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id10" id="class-planearray" name="class-planearray">class _PlaneArray</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an <a class="reference" href="http://mathworld.wolfram.com/Array.html">array</a> of <a class="reference" href="http://mathworld.wolfram.com/Plane.html">plane</a> s with a defined geoemtric relationship</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Array.html">http://mathworld.wolfram.com/Array.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>planes: the postioned planes of the array</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="23%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">style</p>
+</td>
+<td><p class="first last">drawing style for planes</p>
+</td>
+<td><p class="first last">CONSTANT</p>
+</td>
+<td><p class="first last">FILL</p>
+</td>
+</tr>
+<tr><td><p class="first last">density</p>
+</td>
+<td><p class="first last">lines in the array</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">25</p>
+</td>
+</tr>
+<tr><td><p class="first last">scale</p>
+</td>
+<td><p class="first last">drawing scale of planes</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">1</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id11" id="class-circlepencil" name="class-circlepencil">class _CirclePencil</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an <a class="reference" href="http://mathworld.wolfram.com/Array.html">array</a> of <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> s with a defined geoemtric relationship</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Array.html">http://mathworld.wolfram.com/Array.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>circles: the positioned circles of the array</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="23%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">style</p>
+</td>
+<td><p class="first last">drawing style for circles</p>
+</td>
+<td><p class="first last">CONSTANT</p>
+</td>
+<td><p class="first last">LINES</p>
+</td>
+</tr>
+<tr><td><p class="first last">linewidth</p>
+</td>
+<td><p class="first last">linewidth of drawn circles</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.05</p>
+</td>
+</tr>
+<tr><td><p class="first last">precision</p>
+</td>
+<td><p class="first last">precision of drawn circles</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">40</p>
+</td>
+</tr>
+<tr><td><p class="first last">density</p>
+</td>
+<td><p class="first last">lines in the array</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">25</p>
+</td>
+</tr>
+<tr><td><p class="first last">scale</p>
+</td>
+<td><p class="first last">drawing scale of planes</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">1</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id12" id="class-transformation" name="class-transformation">class _Transformation</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">a mapping of geometric objects</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Transformation.html">http://mathworld.wolfram.com/Transformation.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>transforms: the transformed positions of the given objects</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first last">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.3.10: http://docutils.sourceforge.net/" />
+<title>Interactivity Help</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger
+:Contact: goodger@users.sourceforge.net
+:Date: $Date: 2005-11-20 22:17:24 +0100 (Sun, 20 Nov 2005) $
+:Revision: $Revision: 4090 $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* "! important" is used here to override other ``margin-top`` and
+   ``margin-bottom`` styles that are later in the stylesheet or 
+   more specific.  See http://www.w3.org/TR/CSS1#the-cascade */
+.first {
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin-left: 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left {
+  clear: left }
+
+img.align-right {
+  clear: right }
+
+img.borderless {
+  border: 0 }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font-family: serif ;
+  font-size: 100% }
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em ;
+  background-color: #eeeeee }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+tt.docutils {
+  background-color: #eeeeee }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="interactivity-help">
+<h1 class="title"><strong>Interactivity Help</strong></h1>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#mouse-interaction" id="id1" name="id1">Mouse Interaction</a></li>
+<li><a class="reference" href="#panel-menu" id="id2" name="id2">Panel Menu</a></li>
+</ul>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id1" id="mouse-interaction" name="mouse-interaction">Mouse Interaction</a></h1>
+<p>Once a display has entered into a event loop by a call to the pickloop() method, it will respond
+to mouse events, allowing interactivity with the construction:</p>
+<blockquote>
+<ul>
+<li><p class="first"><em>Left click</em>:</p>
+<blockquote>
+<ul class="simple">
+<li>if a pickable point is hit, the point hit will identify itself by enlarging and 
+displaying as in Green</li>
+<li>if no pickable point is hit, all pickable points will respond by flashing larger
+and displaying in Blue</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><em>Left drag</em>:</p>
+<blockquote>
+<ul class="simple">
+<li>a picked point is moved in reaction to a drag with the left mouse button down.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><em>Right drag</em>:</p>
+<blockquote>
+<ul class="simple">
+<li>the scene will rotate around the camera center in reaction to movement with the 
+right mouse button down</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><em>Middle drag, 2 button drag</em>:</p>
+<blockquote>
+<ul class="simple">
+<li>the scene will zoom closer or further in reaction to movement with the middle button, or 
+the left and right buttons simultaneoulsy down.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id2" id="panel-menu" name="panel-menu">Panel Menu</a></h1>
+<p>By default, a creation of a display also creates a separate panel that contains option box and menu 
+options.  The creation of the panel can be suppressed by including the expression &quot;panel = False&quot; as a keyword
+parameter when initializing the display:</p>
+<ul>
+<li><p class="first">Information output</p>
+<p>The lower level boxes of the panel display state information, as follows, floowing the
+display boxes from left to right:</p>
+<ul class="simple">
+<li>the &quot;name&quot; of the currently picked point, if a label has been assigned to the point.</li>
+<li>the the x,y,z coordinates of the currently selected point</li>
+<li>the current on/off state of the Trace option (see menu options, below)</li>
+<li>the current on/off state of the Drag option (see menu options, below)</li>
+</ul>
+</li>
+<li><p class="first">Check buttons and radio buttons:</p>
+<ul>
+<li><p class="first"><strong>Detail Level</strong>:</p>
+<p>when creating a geometric object (i.e. class instance) there is the option to specify
+a display level using the keyword argument &quot;level=&lt;integer value&gt;&quot;, with the level defaulting
+to &quot;1&quot; in the absence of an argument. e.g.:</p>
+<p>p1= Point(1,17,-3,level=3)</p>
+<p>sets the point p1 to be visible only when Level 3 is checked in the Detail Level check box
+group</p>
+<p>Multiple and non-consecutive levels of display can be selected and deselected.</p>
+<p>Assigning an object &quot;level = -1&quot; will assure it to be visible at all display
+levels</p>
+</li>
+<li><p class="first"><strong>Drag Constraints</strong>:</p>
+<p>to allow control movement, pickable points designed to be freely movable in space 
+(FreePoint, zFreePoint) are at any one time constrained to a particular plane or direction
+relative to the display coordinate scheme.  The Drag Constraints radio button option sets
+the constraints on the movement on points picked and dragged.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Menu - Options</p>
+<ul>
+<li><p class="first"><strong>Reset to initial</strong>:</p>
+<p>returns all picked and moved points to their position at initialization, and resets all
+dependant objects to their position based on the points' initial positions.</p>
+</li>
+<li><p class="first"><strong>Remove tracings</strong></p>
+<p>remove all loci of points and/or lines created via the &quot;tracing&quot; mechanism.</p>
+</li>
+<li><p class="first"><strong>Toggle trace on/off</strong></p>
+<p>toggle the enablement of tracing from its current on/off state as diplayed
+in the information text box.</p>
+</li>
+<li><p class="first"><strong>Toggle axis visibility</strong></p>
+<p>toggle the visibility of the representation of the 3d coordinates axes.</p>
+</li>
+<li><p class="first"><strong>Toggle drag effect</strong></p>
+<p>the  drag effect determines whether the construction attempts to update at each
+update cycle during the movement of pickable point (&quot;Drag On&quot;) or updates
+only upon release of the dragged point (&quot;Drag Off&quot;).</p>
+<p>the menu option toggles the state of the drag option form its current state 
+as displayed in the information text box.</p>
+</li>
+<li><p class="first"><strong>Animate</strong></p>
+<p>invoke periodic rendering loops, inducing &quot;animation&quot; of objects (and
+their dependents) designed to re-position at each rendering loop cycle.</p>
+</li>
+<li><p class="first"><strong>Export to Povray</strong></p>
+<p>enter file browser dialogue for export of the visible elements in the scene 
+to Povray scene definition format *.pov</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Menu - Help</p>
+<ul>
+<li><p class="first"><strong>Navigation help</strong></p>
+<p>excerpt of this file on mouse interactivity and panel menus</p>
+</li>
+<li><p class="first"><strong>PyGeo help</strong></p>
+<p>calls PyGeo main help index in html browser</p>
+</li>
+<li><p class="first"><strong>Diagram Instructions</strong></p>
+<p>displays triple quoted (&quot;&quot;&quot;) text in construction script referenced to the &quot;instructions&quot;
+keyword in the initialization of the display</p>
+</li>
+<li><p class="first"><strong>Diagram Explanation</strong></p>
+<p>displays triple quoted (&quot;&quot;&quot;) text in construction script referenced to the &quot;explanation&quot;
+keyword in the initialization of the display</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

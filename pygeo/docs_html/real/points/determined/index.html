@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>Determined Points in 3d Space</title>
+    <link rel="stylesheet" href="../../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../../index.html">Docs</a></li> <li>></li> <li><a href="../../index.html">Real 3d Space</a></li> <li>></li> <li><a href="../index.html">Points</a></li> <li>></li> <li>Determined</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../../quickstart.html">QuickStart</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Real 3d Space</a></strong>
+</li>
+<li><a href="../../real_abstracts.html">Real Abstracts</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Points</a></strong>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Determined</a></strong>
+</li>
+<li><a href="base_point.html">point</a>
+</li>
+<li><a href="intersects.html">intersects</a>
+</li>
+<li><a href="centers.html">centers</a>
+</li>
+<li><a href="inversions.html">inversions</a>
+</li>
+<li><a href="reflections.html">reflections</a>
+</li>
+<li><a href="dividers.html">dividers</a>
+</li>
+<li><a href="foot_points.html">foot points</a>
+</li>
+<li><a href="antipodals.html">antipodals</a>
+</li>
+</div>
+<li><a href="../pickable_animated/index.html">Pickable/Animated</a>
+</li>
+</div>
+<li><a href="../../lines/index.html">Lines</a>
+</li>
+<li><a href="../../circles.html">circles</a>
+</li>
+<li><a href="../../planes.html">planes</a>
+</li>
+<li><a href="../../spheres.html">spheres</a>
+</li>
+<li><a href="../../pointarrays.html">pointarrays</a>
+</li>
+<li><a href="../../curves.html">curves</a>
+</li>
+<li><a href="../../linearrays.html">linearrays</a>
+</li>
+<li><a href="../../planearray.html">planearray</a>
+</li>
+<li><a href="../../circlepencil.html">circlepencil</a>
+</li>
+<li><a href="../../transforms.html">transforms</a>
+</li>
+</div>
+<li><a href="../../../complex/index.html">Complex Numbers</a>
+</li>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="determined-points-in-3d-space">
+<h1 class="title">Determined Points in 3d Space</h1>
+<div class="indexblock">
+<h3>Pages</h3>
+<ul><li><a href="base_point.html">Point(...)</a><p>point derived from the <a class="reference" href="../../real_abstracts.html#class-point">_Point</a> abstract class
+with its position in space determined by coordinate arguments</p>
+</li>
+<li><a href="intersects.html">Intersect(...)</a><p>objects in space derived from the <a class="reference" href="../../real_abstracts.html#class-point">_Point</a> abstract class
+determined as the intersection of given geometric objects.</p>
+</li>
+<li><a href="centers.html">Center(...)</a><p>objects derived from the <a class="reference" href="../../real_abstracts.html#class-point">_Point</a> abstract class,
+with its position in space determined as a geometric center of a given
+geometric object</p>
+</li>
+<li><a href="inversions.html">Inversion(...)</a><p>Objects derived from the <a class="reference" href="../../real_abstracts.html#class-point">_Point</a> abstract class,
+with its position in space determined by its inversive relationship to a given
+geometric object</p>
+</li>
+<li><a href="reflections.html">Reflection(...)</a><p>objects derived from the <a class="reference" href="../../real_abstracts.html#class-point">_Point</a> abstract class,
+with its position in space determined as a reflection in a given
+geometric object</p>
+</li>
+<li><a href="dividers.html">Divider(...)</a><p>objects derived from the <a class="reference" href="../../real_abstracts.html#class-point">_Point</a> abstract class,
+dividing a given geometric object by a given ratio
+and in accordance with a defined geometric relationship</p>
+</li>
+<li><a href="foot_points.html">Foot(...)</a><p>objects derived from the <a class="reference" href="abstracts.html#class-point">_Point</a> abstract class,
+with its position in space determined as a the perpendicular foot of a given
+geometric object with respect to a given point.</p>
+</li>
+<li><a href="antipodals.html">Antipodal(...)</a><p>objects derived from the <a class="reference" href="../../real_abstracts.html#class-point">_Point</a> abstract class,
+with its position in space determined as antipodal (opposite)
+with respect to a given geometric object</p>
+</li></ul>
+
+</div></div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

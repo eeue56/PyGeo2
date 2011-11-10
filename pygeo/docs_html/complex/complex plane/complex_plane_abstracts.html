@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>zPlane Abstracts</title>
+    <link rel="stylesheet" href="../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../index.html">Docs</a></li> <li>></li> <li><a href="../index.html">Complex Numbers</a></li> <li>></li> <li><a href="index.html">Complex Plane</a></li> <li>></li> <li>zPlane Abstracts</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../quickstart.html">QuickStart</a>
+</li>
+<li><a href="../../real/index.html">Real 3d Space</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Complex Numbers</a></strong>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Complex Plane</a></strong>
+</li>
+<li><a href="complex_plane_abstracts.html">zPlane Abstracts</a>
+</li>
+<li><a href="zPoints.html">zpoints</a>
+</li>
+<li><a href="zfree_point.html">zfreepoint</a>
+</li>
+<li><a href="zsliders.html">zsliders</a>
+</li>
+<li><a href="z_anipoints.html">zanipoints</a>
+</li>
+<li><a href="z_lines.html">zlines</a>
+</li>
+<li><a href="z_circles.html">zcircles</a>
+</li>
+<li><a href="z_pointpencils.html">zpointarrays</a>
+</li>
+<li><a href="z_linearrays.html">zlinearrays</a>
+</li>
+<li><a href="z_circlepencils.html">zcirclepencils</a>
+</li>
+<li><a href="mobtransforms.html">ztransforms</a>
+</li>
+</div>
+<li><a href="../unit sphere/index.html">Riemann sphere</a>
+</li>
+</div>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="zabstract-classes-complex-plane">
+<h1 class="title"><strong>zAbstract Classes - Complex Plane</strong></h1>
+<p><strong>classes defining interfaces for PyGeo geometric primitives associated with</strong>
+<strong>the geometry of the `complex plane`_</strong></p>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#class-element" id="id1" name="id1">class Element</a></li>
+<li><a class="reference" href="#class-zpoint" id="id2" name="id2">class _zPoint</a></li>
+<li><a class="reference" href="#class-zfreeposition" id="id3" name="id3">class _zFreePosition</a></li>
+<li><a class="reference" href="#class-zline" id="id4" name="id4">class _zLine</a></li>
+<li><a class="reference" href="#class-zcircle" id="id5" name="id5">class _zCircle</a></li>
+<li><a class="reference" href="#class-zpointarray" id="id6" name="id6">class _zPointArray</a></li>
+<li><a class="reference" href="#class-zlinearray" id="id7" name="id7">class _zLineArray</a></li>
+<li><a class="reference" href="#class-zcirclepencil" id="id8" name="id8">class _zCirclePencil</a></li>
+<li><a class="reference" href="#class-ztransformation" id="id9" name="id9">class _zTransformation</a></li>
+</ul>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id1" id="class-element" name="class-element">class Element</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">the abstract class from which all PyGeo geometric objects derive</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><table border="1" class="first last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">color</p>
+</td>
+<td><p class="first last">drawn color of object</p>
+</td>
+<td><p class="first last">list of 3 numbers</p>
+</td>
+<td><p class="first last">[0,0,0] (BLACK)</p>
+</td>
+</tr>
+<tr><td><p class="first last">level</p>
+</td>
+<td><p class="first last">visibility &quot;level&quot; - see GUI</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">1</p>
+</td>
+</tr>
+<tr><td><p class="first last">trace</p>
+</td>
+<td><p class="first last">toggle for tracing function</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+<tr><td><p class="first last">texture</p>
+</td>
+<td><p class="first last">texture for Povray output</p>
+</td>
+<td><p class="first last">string</p>
+</td>
+<td><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id2" id="class-zpoint" name="class-zpoint">class _zPoint</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an O dimensional object with a defined postion on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> .</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><cite>class. Element</cite>,base.CPosition, base.zdraw.zPoint</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://en.wikipedia.org/wiki/Complex_number">http://en.wikipedia.org/wiki/Complex_number</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>real: the real coordinate</li>
+<li>imag  the imaginary coordinate</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords: from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">pointsize</p>
+</td>
+<td><p class="first last">size of drawn point</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.1</p>
+</td>
+</tr>
+<tr><td><p class="first last">label</p>
+</td>
+<td><p class="first last">label rendered for point</p>
+</td>
+<td><p class="first last">string</p>
+</td>
+<td><p class="first last">None</p>
+</td>
+</tr>
+<tr><td><p class="first last">tracewidth</p>
+</td>
+<td><p class="first last">width of trace curve</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">pointsize/2</p>
+</td>
+</tr>
+<tr><td><p class="first last">tracecolor</p>
+</td>
+<td><p class="first last">color of trace curve</p>
+</td>
+<td><p class="first last">list of 3 numbers</p>
+</td>
+<td><p class="first last">color</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontsize</p>
+</td>
+<td><p class="first last">fontsize of label</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">TINYFONT</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontcolor</p>
+</td>
+<td><p class="first last">color of label font</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">BLACK</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontXoffset</p>
+</td>
+<td><p class="first last">horizontal offset of label</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">pointsize/10.+ 3.0</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontYoffset</p>
+</td>
+<td><p class="first last">vertical offset of label</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">pointsize/10.+ 3.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id3" id="class-zfreeposition" name="class-zfreeposition">class _zFreePosition</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an O dimensional object of the complex plane that can picked and moved, either
+freely on the plnae or constrained to a given geoemtric object of the plane.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-zpoint">class _zPoint</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://en.wikipedia.org/wiki/Complex_number">http://en.wikipedia.org/wiki/Complex_number</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>real: the real coordinate</li>
+<li>imag  the imaginary coordinate</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords: from <a class="reference" href="#class-element">class Element</a> :</p>
+<p class="last">inherited keywords: from <a class="reference" href="#class-zpoint">class _zPoint</a> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id4" id="class-zline" name="class-zline">class _zLine</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">a straight line of the 'complex plane'_ , representing a 'complex circle'_ of
+infinite radius</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a> , base.zdraw.zLine</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Line.html">http://mathworld.wolfram.com/Line.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>p1: a complex point on the line</li>
+<li>p2  a second complex point on the line</li>
+<li>_hermitian: the hermitian matrix associated with the line</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">linewidth</p>
+</td>
+<td><p class="first last">width of drawn line</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.02</p>
+</td>
+</tr>
+<tr><td><p class="first last">label</p>
+</td>
+<td><p class="first last">label rendered for point</p>
+</td>
+<td><p class="first last">string</p>
+</td>
+<td><p class="first last">None</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontsize</p>
+</td>
+<td><p class="first last">fontsize of label</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">NORMALFONT</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontcolor</p>
+</td>
+<td><p class="first last">color of label font</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">BLACK</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontXoffset</p>
+</td>
+<td><p class="first last">horizontal offset of label</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">pointsize/10.+ 3.0</p>
+</td>
+</tr>
+<tr><td><p class="first last">fontYoffset</p>
+</td>
+<td><p class="first last">vertical offset of label</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">pointsize/10.+ 3.0</p>
+</td>
+</tr>
+<tr><td><p class="first last">label_ratio</p>
+</td>
+<td><p class="first last">relative position of label</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.5 (midpoint)</p>
+</td>
+</tr>
+<tr><td><p class="first last">show_normal</p>
+</td>
+<td><p class="first last">draw line normal?</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id5" id="class-zcircle" name="class-zcircle">class _zCircle</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">the set of points the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> that are equidistant from a given point
+of the plane</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a> , base.zdraw.zCircle</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://www.ies.co.jp/math/java/comp/cplcircle/cplcircle.html">http://www.ies.co.jp/math/java/comp/cplcircle/cplcircle.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>_center: the complex point on circle's center</li>
+<li>_cpoint: a complex point on circle circumference</li>
+<li>_hermitian: the hermitian matrix associated with the circle</li>
+<li>_radius: the circle's radius</li>
+<li>_radiusSquared: the square of the circle's radius</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="15%" />
+<col width="36%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">style</p>
+</td>
+<td><p class="first last">drawing style</p>
+</td>
+<td><p class="first last">constant</p>
+</td>
+<td><p class="first last">LINES</p>
+</td>
+</tr>
+<tr><td><p class="first last">linewidth</p>
+</td>
+<td><p class="first last">width of drawn lines</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.02</p>
+</td>
+</tr>
+<tr><td><p class="first last">precision</p>
+</td>
+<td><p class="first last">drawing precision</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">40</p>
+</td>
+</tr>
+<tr><td><p class="first last">show_normal</p>
+</td>
+<td><p class="first last">draw normal</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+<tr><td><p class="first last">normal_width</p>
+</td>
+<td><p class="first last">width of drawn normal</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.4</p>
+</td>
+</tr>
+<tr><td><p class="first last">fixed</p>
+</td>
+<td><p class="first last">fix to initial radius</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id6" id="class-zpointarray" name="class-zpointarray">class _zPointArray</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an array of <a class="reference" href="#class-zpoint">class _zPoint</a> s on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> with a defined
+geometric relationship</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Array.html">http://mathworld.wolfram.com/Array.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>zpoints: positioned complex points of the array</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">pointsize</p>
+</td>
+<td><p class="first last">size of drawn points</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.4</p>
+</td>
+</tr>
+<tr><td><p class="first last">density</p>
+</td>
+<td><p class="first last">points in the array</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">50</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id7" id="class-zlinearray" name="class-zlinearray">class _zLineArray</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an array of <a class="reference" href="#class-zline">class _zLine</a> s on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Array.html">http://mathworld.wolfram.com/Array.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>zlines: positioned lines of the complex plane</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">linewidth</p>
+</td>
+<td><p class="first last">linewidth of drawn circles</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.015</p>
+</td>
+</tr>
+<tr><td><p class="first last">density</p>
+</td>
+<td><p class="first last">lines in the array</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">50</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id8" id="class-zcirclepencil" name="class-zcirclepencil">class _zCirclePencil</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an <a class="reference" href="http://mathworld.wolfram.com/Array.html">array</a> of <a class="reference" href="#class-zcircle">class _zCircle</a> s on the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Array.html">http://mathworld.wolfram.com/Array.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>zcircles: positioned circles of the complex plane</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">style</p>
+</td>
+<td><p class="first last">drawing style for circles</p>
+</td>
+<td><p class="first last">CONSTANT</p>
+</td>
+<td><p class="first last">LINES</p>
+</td>
+</tr>
+<tr><td><p class="first last">linewidth</p>
+</td>
+<td><p class="first last">linewidth of drawn circles</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">.015</p>
+</td>
+</tr>
+<tr><td><p class="first last">precision</p>
+</td>
+<td><p class="first last">precision of drawn circles</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">70</p>
+</td>
+</tr>
+<tr><td><p class="first last">density</p>
+</td>
+<td><p class="first last">lines in the array</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">30</p>
+</td>
+</tr>
+<tr><td><p class="first last">scale</p>
+</td>
+<td><p class="first last">drawing scale of planes</p>
+</td>
+<td><p class="first last">numeric</p>
+</td>
+<td><p class="first last">1</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id9" id="class-ztransformation" name="class-ztransformation">class _zTransformation</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">a <a class="reference" href="http://mathworld.wolfram.com/LinearFractionalTransformation.html">Mobius transformation</a> of geometric objects of the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/LinearFractionalTransformation.html">http://mathworld.wolfram.com/LinearFractionalTransformation.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>_mobius: the Mobius tranformation matrix defining the transformation</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p>class keywords:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="37%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">normal_form</p>
+</td>
+<td><p class="first last">convert matrix to normal form</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

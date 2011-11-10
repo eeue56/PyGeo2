@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>PointArray(...)</title>
+    <link rel="stylesheet" href="../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../index.html">Docs</a></li> <li>></li> <li><a href="index.html">Real 3d Space</a></li> <li>></li> <li>pointarrays</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Docs</a></strong>
+</li>
+<li><a href="../quickstart.html">QuickStart</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Real 3d Space</a></strong>
+</li>
+<li><a href="real_abstracts.html">Real Abstracts</a>
+</li>
+<li><a href="points/index.html">Points</a>
+</li>
+<li><a href="lines/index.html">Lines</a>
+</li>
+<li><a href="circles.html">circles</a>
+</li>
+<li><a href="planes.html">planes</a>
+</li>
+<li><a href="spheres.html">spheres</a>
+</li>
+<li><a href="pointarrays.html">pointarrays</a>
+</li>
+<li><a href="curves.html">curves</a>
+</li>
+<li><a href="linearrays.html">linearrays</a>
+</li>
+<li><a href="planearray.html">planearray</a>
+</li>
+<li><a href="circlepencil.html">circlepencil</a>
+</li>
+<li><a href="transforms.html">transforms</a>
+</li>
+</div>
+<li><a href="../complex/index.html">Complex Numbers</a>
+</li>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="pointarray">
+<h1 class="title"><strong>PointArray(...)</strong></h1>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#def-pointarray" id="id2" name="id2">def PointArray</a><ul>
+<li><a class="reference" href="#class-pointpencil" id="id3" name="id3">class PointPencil</a></li>
+<li><a class="reference" href="#class-circlingpencil" id="id4" name="id4">class CirclingPencil</a></li>
+<li><a class="reference" href="#class-circlepoints" id="id5" name="id5">class CirclePoints</a></li>
+<li><a class="reference" href="#class-arrayintersect" id="id6" name="id6">class ArrayIntersect</a></li>
+<li><a class="reference" href="#class-harmonics" id="id7" name="id7">class Harmonics</a></li>
+<li><a class="reference" href="#class-growthmeasure" id="id8" name="id8">class GrowthMeasure</a></li>
+<li><a class="reference" href="#class-conic" id="id9" name="id9">class Conic</a></li>
+<li><a class="reference" href="#class-correlationpoints" id="id10" name="id10">class CorrelationPoints</a></li>
+<li><a class="reference" href="#class-planepoints" id="id11" name="id11">class PlanePoints</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Objects derived from the <a class="reference" href="abstracts.html#class-pointarray">_PointArray</a> abstract class,
+representing an array of points with determined positions
+in space</p>
+<div class="section">
+<h1><a class="toc-backref" href="#id2" id="def-pointarray" name="def-pointarray">def PointArray</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>PointArray(line); calls: <a class="reference" href="#class-pointpencil">class PointPencil</a></li>
+<li>PointArray(line_array,line); calls: <a class="reference" href="#class-circlingpencil">class CirclingPencil</a></li>
+<li>PointArray(circle); calls: <a class="reference" href="#class-circlepoints">class CirclePoints</a></li>
+<li>PointArray(line_array1,line_array2); calls: <a class="reference" href="#class-arrayintersect">class ArrayIntersect</a></li>
+<li>PointArray(point_array,point2,point3); calls: <a class="reference" href="#class-harmonics">class Harmonics</a></li>
+<li>PointArray(point1,point2,point3,point4); calls: <a class="reference" href="#class-growthmeasure">class GrowthMeasure</a></li>
+<li>PointArray(point1,point2,point3,point4,point5); calls: <a class="reference" href="#class-conic">class Conic</a></li>
+<li>PointArray(conic,linearray); calls: <a class="reference" href="#class-correlationpoints">class CorrelationPoints</a></li>
+<li>PointArray(plane,linearray); calls: <a class="reference" href="#class-planepoints">class PlanePoints</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first last">An instance of an object derived from the <a class="reference" href="abstracts.html#class-pointarray">_PointArray</a> abstract class,
+representing an array of points with determined positions
+in space</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section">
+<h2><a class="toc-backref" href="#id3" id="class-pointpencil" name="class-pointpencil">class PointPencil</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>PointArray(line)</li>
+<li>PointArray(line, seg=True)</li>
+<li>PointPencil(line)</li>
+<li>PointPencil(line, seg=True)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">array of equidistant points on a line, or line segment
+between the lines p1 and p2 arguements is keywoes &quot;seg&quot; = True</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/LineSegmentRange.html">http://mathworld.wolfram.com/LineSegmentRange.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id4" id="class-circlingpencil" name="class-circlingpencil">class CirclingPencil</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>PointArray(line_array,line)</li>
+<li>CirclingPencil(line_array,line)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">array of points determined as the intersection of the given array of lines
+and the given line</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">line and line array are coplanar</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Pencil.html">http://mathworld.wolfram.com/Pencil.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id5" id="class-circlepoints" name="class-circlepoints">class CirclePoints</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>PointArray(circle)</li>
+<li>CirclePoints(circle)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">array of equidistant points on a given circle</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/CirclePointPicking.html">http://mathworld.wolfram.com/CirclePointPicking.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id6" id="class-arrayintersect" name="class-arrayintersect">class ArrayIntersect</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>PointArray(line_array1,line_array2)</li>
+<li>ArrayIntersect(line_array1,line_array2)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">array of points determined as the intersection of the given arrays of lines</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">line arrays are coplanar</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Pencil.html">http://mathworld.wolfram.com/Pencil.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id7" id="class-harmonics" name="class-harmonics">class Harmonics</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>PointArray(point_array,point1,point2)</li>
+<li>Harmonics(point_array,point1,point2)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">array of points harmoinc to the given array, with respect to the given point arguments</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/HarmonicConjugate.html">http://mathworld.wolfram.com/HarmonicConjugate.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id8" id="class-growthmeasure" name="class-growthmeasure">class GrowthMeasure</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>PointArray(point1,point2,point3,point4)</li>
+<li>GrowthMeasure(point1,point2,point3,point4)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">an array of points of the line of the given points with any 2 successive
+points having a cross ratio equal to that of point3 and point4 with respect
+to point1 and point2</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">points are coplanar; points are distinct</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None; None</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Homographic.html">http://mathworld.wolfram.com/Homographic.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id9" id="class-conic" name="class-conic">class Conic</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>PointArray(point1,point2,point3,point4,point5)</li>
+<li>Conic(point1,point2,point3,point4,point5)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">array of points on the conic determined by the 5 points</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">points are coplanar; points are distinct, no 3 points are collinear</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">None; None; undefined</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/ConicSection.html">http://mathworld.wolfram.com/ConicSection.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id10" id="class-correlationpoints" name="class-correlationpoints">class CorrelationPoints</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>PointArray(conic, line_array)</li>
+<li>CorrelationPoints(conic, line_array)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">array of poles of the lines of the line array with respect to the given conic</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">line arrray and conic are coplanar</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">undefined</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/ProjectiveCorrelation.html">http://mathworld.wolfram.com/ProjectiveCorrelation.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id11" id="class-planepoints" name="class-planepoints">class PlanePoints</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>PointArray(plane, line_array)</li>
+<li>PlanePoints(plane, line_array)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">array of points of intersection of the lines of the line_array with the given plane</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">conditions:</th><td class="field-body"><p class="first">line arrray anot on plane</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">else returns:</th><td class="field-body"><p class="first">undefined</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Line-PlaneIntersection.html">http://mathworld.wolfram.com/Line-PlaneIntersection.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

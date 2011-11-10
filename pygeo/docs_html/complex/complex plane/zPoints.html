@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>zPoint(...)</title>
+    <link rel="stylesheet" href="../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../index.html">Docs</a></li> <li>></li> <li><a href="../index.html">Complex Numbers</a></li> <li>></li> <li><a href="index.html">Complex Plane</a></li> <li>></li> <li>zpoints</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../quickstart.html">QuickStart</a>
+</li>
+<li><a href="../../real/index.html">Real 3d Space</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Complex Numbers</a></strong>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Complex Plane</a></strong>
+</li>
+<li><a href="complex_plane_abstracts.html">zPlane Abstracts</a>
+</li>
+<li><a href="zPoints.html">zpoints</a>
+</li>
+<li><a href="zfree_point.html">zfreepoint</a>
+</li>
+<li><a href="zsliders.html">zsliders</a>
+</li>
+<li><a href="z_anipoints.html">zanipoints</a>
+</li>
+<li><a href="z_lines.html">zlines</a>
+</li>
+<li><a href="z_circles.html">zcircles</a>
+</li>
+<li><a href="z_pointpencils.html">zpointarrays</a>
+</li>
+<li><a href="z_linearrays.html">zlinearrays</a>
+</li>
+<li><a href="z_circlepencils.html">zcirclepencils</a>
+</li>
+<li><a href="mobtransforms.html">ztransforms</a>
+</li>
+</div>
+<li><a href="../unit sphere/index.html">Riemann sphere</a>
+</li>
+</div>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="zpoint">
+<h1 class="title">zPoint(...)</h1>
+<p>Object derived from the <a class="reference" href="complex_plane_abstracts.html#class-zpoint">_zPoint</a> abstract class,
+representing a point of the complex plane, with its position determined with
+respect to its numeric, geometric, and/or constant arguments</p>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#def-zpoint" id="id2" name="id2">def zPoint</a><ul>
+<li><a class="reference" href="#class-zfixedpoint" id="id3" name="id3">class zFixedPoint</a></li>
+<li><a class="reference" href="#class-zpolarpoint" id="id4" name="id4">class zPolarPoint</a></li>
+<li><a class="reference" href="#class-zconjugate" id="id5" name="id5">class zConjugate</a></li>
+<li><a class="reference" href="#class-zorthopoint" id="id6" name="id6">class zOrthoPoint</a></li>
+<li><a class="reference" href="#class-zinversepoint" id="id7" name="id7">class zInversePoint</a></li>
+<li><a class="reference" href="#class-zpowerpoint" id="id8" name="id8">class zPowerPoint</a></li>
+<li><a class="reference" href="#class-zrotation" id="id9" name="id9">class zRotation</a></li>
+<li><a class="reference" href="#class-z-urotation" id="id10" name="id10">class z_uRotation</a></li>
+<li><a class="reference" href="#class-zcircumpoint" id="id11" name="id11">class zCircumPoint</a></li>
+<li><a class="reference" href="#class-zharmonic" id="id12" name="id12">class zHarmonic</a></li>
+<li><a class="reference" href="#class-zcrosspoint" id="id13" name="id13">class zCrossPoint</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id2" id="def-zpoint" name="def-zpoint">def zPoint</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(&lt;float&gt;, &lt;float&gt;);  calls: <a class="reference" href="#class-zfixedpoint">class zFixedPoint</a></li>
+<li>zPoint(&lt;complex&gt;);  calls: <a class="reference" href="#class-zfixedpoint">class zFixedPoint</a></li>
+<li>zPoint(angle=&lt;float&gt;, dist=&lt;float&gt;);  calls: <a class="reference" href="#class-zpolarpoint">class zPolarPoint</a></li>
+<li>zPoint(zpoint,&lt;alt= CONJUGATE&gt;);  calls: <a class="reference" href="#class-zconjugate">class zConjugate</a></li>
+<li>zPoint(zpoint,alt=ORTHO);  calls: <a class="reference" href="#class-zorthopoint">class zOrthoPoint</a></li>
+<li>zPoint(zpoint,zcircle);  calls: <a class="reference" href="#class-zinversepoint">class zInversePoint</a></li>
+<li>zPoint(zcircle,zcircle); calls:<a class="reference" href="#class-zpowerpoint">class zPowerPoint</a></li>
+<li>zPoint(zpoint,zpoint,&lt;float&gt;); calls:<a class="reference" href="#class-zrotation">class zRotation</a></li>
+<li>zPoint(zcircle,zcircle); calls:<a class="reference" href="#class-zpowerpoint">class zPowerPoint</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">A point of the origin centered 'unit sphere'_, as determined by its arguments</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/UnitSphere.html">http://mathworld.wolfram.com/UnitSphere.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section">
+<h2><a class="toc-backref" href="#id3" id="class-zfixedpoint" name="class-zfixedpoint">class zFixedPoint</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(&lt;float&gt;,&lt;float&gt;)</li>
+<li>zPoint(complex)</li>
+<li>zFixedPoint(&lt;float&gt;,&lt;float&gt;)</li>
+<li>zFixedPoint(complex)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">a point on the complex plane. With 2 float arguments, the 1st is the real,
+the second the imaginary element. Also accepts a complex number argument.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">http://mathworld.wolfram.com/ComplexPlane.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id4" id="class-zpolarpoint" name="class-zpolarpoint">class zPolarPoint</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(angle=&lt;float&gt;,dist=&lt;float&gt;)</li>
+<li>zPolarPoint(angle=&lt;float&gt;,dist=&lt;float&gt;)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">a point on the complex plane expressed in <a class="reference" href="http://mathworld.wolfram.com/PolarCoordinates.html">polar coordinates</a> , with
+the angle keyword argument defaulting to PI and the dist keyword argument
+defaulting to 1.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/PolarRepresentation.html">http://mathworld.wolfram.com/PolarRepresentation.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id5" id="class-zconjugate" name="class-zconjugate">class zConjugate</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(zPoint)</li>
+<li>zPoint(zPoint,alt=CONJUGATE)</li>
+<li>zConjugate(zPoint)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the complex conjugate of the given complex point.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/ComplexConjugate.html">http://mathworld.wolfram.com/ComplexConjugate.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id6" id="class-zorthopoint" name="class-zorthopoint">class zOrthoPoint</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(zPoint,alt=ORTHO)</li>
+<li>zOrthoPoint(zPoint)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the point of the complex plane <a class="reference" href="http://en.wikipedia.org/wiki/Orthogonal">orthogonal</a> to the given complex point,
+i.e. the point <a class="reference" href="http://mathworld.wolfram.com/AntipodalPoints.html">antipodal</a> to it's <a class="reference" href="http://mathworld.wolfram.com/StereographicProjection.html">stereographic projection</a> onto the
+'unit sphere`_.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://www.bbc.co.uk/dna/h2g2/A974397">http://www.bbc.co.uk/dna/h2g2/A974397</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id7" id="class-zinversepoint" name="class-zinversepoint">class zInversePoint</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(zpoint,zcircle)</li>
+<li>zInversePoint(plane, line)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the point of complex 'inverse point'_ to the given complex point with
+respect to the given circle</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/InversePoints.html">http://mathworld.wolfram.com/InversePoints.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id8" id="class-zpowerpoint" name="class-zpowerpoint">class zPowerPoint</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(zcircle1,zcircle2)</li>
+<li>zPowerPoint(zcircle1,zcircle2)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the point of intersection of the <a class="reference" href="http://mathworld.wolfram.com/RadicalLine.html">radical axis</a> of the given
+circles and the line of the circles' centers</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Circle-CircleIntersection.html">http://mathworld.wolfram.com/Circle-CircleIntersection.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id9" id="class-zrotation" name="class-zrotation">class zRotation</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(zpoint,zpoint,&lt;angle=PI&gt;)</li>
+<li>zRotation(zpoint,zpoint,&lt;angle=PI&gt;)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the rotation of the second <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a> argument induced by the rotation of
+the <a class="reference" href="http://mathworld.wolfram.com/UnitSphere.html">unit sphere</a> , with the <a class="reference" href="http://mathworld.wolfram.com/StereographicProjection.html">stereographic projection</a> of the first point
+argument as <a class="reference" href="http://en.wikipedia.org/wiki/Axis_of_rotation">axis of rotation</a> .</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://www.math.union.edu/~dpvc/math/4D/stereo-projection/welcome.html">http://www.math.union.edu/~dpvc/math/4D/stereo-projection/welcome.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id10" id="class-z-urotation" name="class-z-urotation">class z_uRotation</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(upoint,zpoint,&lt;angle=PI&gt;)</li>
+<li>z_uRotation(Upoint,zpoint,&lt;angle=PI&gt;)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the rotation of the second <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a> argument induced by the rotation of
+the <a class="reference" href="http://mathworld.wolfram.com/UnitSphere.html">unit sphere</a> , with the upoint argument as <a class="reference" href="http://en.wikipedia.org/wiki/Axis_of_rotation">axis of rotation</a> .</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://www.math.union.edu/~dpvc/math/4D/stereo-projection/welcome.html">http://www.math.union.edu/~dpvc/math/4D/stereo-projection/welcome.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id11" id="class-zcircumpoint" name="class-zcircumpoint">class zCircumPoint</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(zcircle,&lt;angle=PI&gt;)</li>
+<li>zCircumPoint(zcircle,&lt;angle=PI&gt;)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the point on the given circle rotated by the given angle (in radians)</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Circumference.html">http://mathworld.wolfram.com/Circumference.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id12" id="class-zharmonic" name="class-zharmonic">class zHarmonic</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint(zpoint1,zpoint2,zpoint3)</li>
+<li>zHarmonic(zpoint1,zpoint2,zpoint3)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the <a class="reference" href="http://mathworld.wolfram.com/HarmonicConjugate.html">harmonic conjugate</a> of the 3rd argument with the respect to the
+first 2 arguments</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/HarmonicConjugate.html">http://mathworld.wolfram.com/HarmonicConjugate.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id13" id="class-zcrosspoint" name="class-zcrosspoint">class zCrossPoint</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zPoint([zpoint1,zpoint2,zpoint3,zpoint4],[zpoint1a,zpoint2a,zpoint3a])</li>
+<li>zCrossPoint([zpoint1,zpoint2,zpoint3,zpoint4],[zpoint1a,zpoint2a,zpoint3a],zpoint4)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first">the Mobius transformation of the 4th point of the first point set, defined by the ordered
+correspondance of the first 3 points in the first point set to the 3 points in the
+second point set</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://s13a.math.aca.mmu.ac.uk/Geometry/M23Geom/XRatio/xratio.html">http://s13a.math.aca.mmu.ac.uk/Geometry/M23Geom/XRatio/xratio.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

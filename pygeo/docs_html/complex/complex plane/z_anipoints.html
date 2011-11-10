@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>zAniPoint(...)</title>
+    <link rel="stylesheet" href="../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../index.html">Docs</a></li> <li>></li> <li><a href="../index.html">Complex Numbers</a></li> <li>></li> <li><a href="index.html">Complex Plane</a></li> <li>></li> <li>zanipoints</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../quickstart.html">QuickStart</a>
+</li>
+<li><a href="../../real/index.html">Real 3d Space</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Complex Numbers</a></strong>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Complex Plane</a></strong>
+</li>
+<li><a href="complex_plane_abstracts.html">zPlane Abstracts</a>
+</li>
+<li><a href="zPoints.html">zpoints</a>
+</li>
+<li><a href="zfree_point.html">zfreepoint</a>
+</li>
+<li><a href="zsliders.html">zsliders</a>
+</li>
+<li><a href="z_anipoints.html">zanipoints</a>
+</li>
+<li><a href="z_lines.html">zlines</a>
+</li>
+<li><a href="z_circles.html">zcircles</a>
+</li>
+<li><a href="z_pointpencils.html">zpointarrays</a>
+</li>
+<li><a href="z_linearrays.html">zlinearrays</a>
+</li>
+<li><a href="z_circlepencils.html">zcirclepencils</a>
+</li>
+<li><a href="mobtransforms.html">ztransforms</a>
+</li>
+</div>
+<li><a href="../unit sphere/index.html">Riemann sphere</a>
+</li>
+</div>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="zanipoint">
+<h1 class="title"><strong>zAniPoint(...)</strong></h1>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#def-zanipoint" id="id1" name="id1">def zAniPoint</a><ul>
+<li><a class="reference" href="#class-zcirclingpoint" id="id2" name="id2">class zCirclingPoint</a></li>
+<li><a class="reference" href="#class-zslidingpoint" id="id3" name="id3">class zSlidingPoint</a></li>
+<li><a class="reference" href="#class-zrotatingpoint" id="id4" name="id4">class zRotatingPoint</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Points derived from the <a class="reference" href="complex_plane_abstracts.html#class-zpoint">_zPoint</a> abstract class
+which move in relationship to a given geometric object
+of the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a> at each update cycle</p>
+<div class="section">
+<h1><a class="toc-backref" href="#id1" id="def-zanipoint" name="def-zanipoint">def zAniPoint</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><ul class="first simple">
+<li>zAniPoint(zcircle,&lt;rate=integer&gt;,&lt;angle=numeric&gt;); calls <a class="reference" href="#class-zcirclingpoint">class zCirclingPoint</a></li>
+<li>zAniPoint(zline, &lt;rate=integer&gt;,&lt;ratio=numeric&gt;); calls <a class="reference" href="#class-zslidingpoint">class zSlidingPoint</a></li>
+<li>zAniPoint(zpoint,zpoint,&lt;rate=integer&gt;); calls <a class="reference" href="#class-zrotatingpoint">class zRotatingPoint</a></li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">returns:</th><td class="field-body"><p class="first last">a point which moves constrained to a given geometric object of the <a class="reference" href="http://mathworld.wolfram.com/ComplexPlane.html">complex plane</a>
+at each display update cycle, with the initial position and rate of movement
+determinable by keyword argument.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section">
+<h2><a class="toc-backref" href="#id2" id="class-zcirclingpoint" name="class-zcirclingpoint">class zCirclingPoint</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><blockquote class="first">
+<ul class="simple">
+<li>zAniPoint(circle,&lt;rate=integer&gt;,&lt;angle=numeric&gt;)</li>
+<li>zCirclingPoint(circle,&lt;rate=integer&gt;,&lt;angle=numeric&gt;)</li>
+</ul>
+</blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">returns:</th><td class="field-body">a point which moves around the circumference of the given <cite>complex circle_</cite> , at a rate
+determined by the 'rate' keyword, and initial position as determined by
+the 'angle' keyword.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Circumference.html">http://mathworld.wolfram.com/Circumference.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id3" id="class-zslidingpoint" name="class-zslidingpoint">class zSlidingPoint</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><blockquote class="first">
+<ul class="simple">
+<li>zAniPoint(line, &lt;rate=integer&gt;,&lt;ratio=numeric&gt;)</li>
+<li>zSlidingPoint(line, &lt;rate=integer&gt;,&lt;ratio=numeric&gt;)</li>
+</ul>
+</blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">returns:</th><td class="field-body">a point which moves along the given <a class="reference" href="http://mathworld.wolfram.com/Line.html">line</a> , at a rate
+determined by the 'rate' keyword, and initial position as determined by
+the 'ratio' keyword.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first last"><a class="reference" href="http://mathworld.wolfram.com/Line.html">http://mathworld.wolfram.com/Line.html</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2><a class="toc-backref" href="#id4" id="class-zrotatingpoint" name="class-zrotatingpoint">class zRotatingPoint</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">constructors:</th><td class="field-body"><blockquote class="first">
+<ul class="simple">
+<li>zAniPoint(zpoint1,zpoint2, &lt;rate=integer&gt;)</li>
+<li>zRotatingPoint(zpoint1,zpoint2, &lt;rate=integer&gt;)</li>
+</ul>
+</blockquote>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">returns:</th><td class="field-body">the rotation of the second <a class="reference" href="http://mathworld.wolfram.com/Point.html">point</a> argument induced by the rotation of the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a> ,
+with the <a class="reference" href="http://mathworld.wolfram.com/StereographicProjection.html">stereographic projection</a> of the first point argmuent as <a class="reference" href="http://en.wikipedia.org/wiki/Axis_of_rotation">axis of rotation</a> .</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

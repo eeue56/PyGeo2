@@ -1,0 +1,142 @@
+=======================
+**Interactivity Help** 
+=======================
+
+.. contents::
+
+
+
+Mouse Interaction
+---------------------------------------------------------------------------------------------
+
+Once a display has entered into a event loop by a call to the pickloop() method, it will respond
+to mouse events, allowing interactivity with the construction:
+
+  -  *Left click*: 
+    
+         - if a pickable point is hit, the point hit will identify itself by enlarging and 
+           displaying as in Green
+           
+         - if no pickable point is hit, all pickable points will respond by flashing larger
+           and displaying in Blue
+
+  -  *Left drag*:
+
+         - a picked point is moved in reaction to a drag with the left mouse button down.  
+
+  -  *Right drag*:
+
+         -  the scene will rotate around the camera center in reaction to movement with the 
+            right mouse button down
+            
+  -  *Middle drag, 2 button drag*:
+
+         -  the scene will zoom closer or further in reaction to movement with the middle button, or 
+            the left and right buttons simultaneoulsy down.
+            
+Panel Menu
+---------------------------------------------------------------------------------------------
+
+By default, a creation of a display also creates a separate panel that contains option box and menu 
+options.  The creation of the panel can be suppressed by including the expression "panel = False" as a keyword
+parameter when initializing the display:
+
+
+- Information output
+
+  The lower level boxes of the panel display state information, as follows, floowing the
+  display boxes from left to right:
+
+  -  the "name" of the currently picked point, if a label has been assigned to the point.
+  -  the the x,y,z coordinates of the currently selected point
+  -  the current on/off state of the Trace option (see menu options, below)
+  -  the current on/off state of the Drag option (see menu options, below) 
+
+- Check buttons and radio buttons:
+
+  - **Detail Level**:
+
+    when creating a geometric object (i.e. class instance) there is the option to specify
+    a display level using the keyword argument "level=<integer value>", with the level defaulting
+    to "1" in the absence of an argument. e.g.:
+         
+    p1= Point(1,17,-3,level=3) 
+         
+    sets the point p1 to be visible only when Level 3 is checked in the Detail Level check box
+    group
+         
+    Multiple and non-consecutive levels of display can be selected and deselected.
+         
+    Assigning an object "level = -1" will assure it to be visible at all display
+    levels
+         
+  - **Drag Constraints**:   
+
+    to allow control movement, pickable points designed to be freely movable in space 
+    (FreePoint, zFreePoint) are at any one time constrained to a particular plane or direction
+    relative to the display coordinate scheme.  The Drag Constraints radio button option sets
+    the constraints on the movement on points picked and dragged.
+                
+      
+- Menu - Options
+        
+  - **Reset to initial**:
+        
+    returns all picked and moved points to their position at initialization, and resets all
+    dependant objects to their position based on the points' initial positions.
+        
+  - **Remove tracings**
+        
+    remove all loci of points and/or lines created via the "tracing" mechanism. 
+        
+        
+  - **Toggle trace on/off**
+        
+    toggle the enablement of tracing from its current on/off state as diplayed
+    in the information text box.
+        
+  - **Toggle axis visibility**
+        
+    toggle the visibility of the representation of the 3d coordinates axes.
+         
+         
+  - **Toggle drag effect**
+      
+    the  drag effect determines whether the construction attempts to update at each
+    update cycle during the movement of pickable point ("Drag On") or updates
+    only upon release of the dragged point ("Drag Off").
+        
+    the menu option toggles the state of the drag option form its current state 
+    as displayed in the information text box.
+        
+  - **Animate**
+        
+    invoke periodic rendering loops, inducing "animation" of objects (and
+    their dependents) designed to re-position at each rendering loop cycle.
+    
+  - **Export to Povray**  
+          
+    enter file browser dialogue for export of the visible elements in the scene 
+    to Povray scene definition format \*.pov
+    
+- Menu - Help
+ 
+  - **Navigation help**
+    
+    excerpt of this file on mouse interactivity and panel menus
+  
+  
+  - **PyGeo help**
+    
+    calls PyGeo main help index in html browser
+    
+  - **Diagram Instructions**
+  
+    displays triple quoted (""") text in construction script referenced to the "instructions"
+    keyword in the initialization of the display
+    
+  - **Diagram Explanation**
+  
+    displays triple quoted (""") text in construction script referenced to the "explanation"
+    keyword in the initialization of the display
+    	

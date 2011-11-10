@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>uSphere Abstracts</title>
+    <link rel="stylesheet" href="../../stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="../../index.html">Docs</a></li> <li>></li> <li><a href="../index.html">Complex Numbers</a></li> <li>></li> <li><a href="index.html">Riemann sphere</a></li> <li>></li> <li>uSphere Abstracts</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="../../images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../../index.html">Docs</a></strong>
+</li>
+<li><a href="../../quickstart.html">QuickStart</a>
+</li>
+<li><a href="../../real/index.html">Real 3d Space</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="../index.html">Complex Numbers</a></strong>
+</li>
+<li><a href="../complex plane/index.html">Complex Plane</a>
+</li>
+<div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Riemann sphere</a></strong>
+</li>
+<li><a href="unit_sphere_abstracts.html">uSphere Abstracts</a>
+</li>
+<li><a href="uPoints.html">upoints</a>
+</li>
+<li><a href="uSliders.html">usliders</a>
+</li>
+<li><a href="uAniPoints.html">uanipoints</a>
+</li>
+<li><a href="uCircles.html">ucircles</a>
+</li>
+<li><a href="uSpheres.html">uspheres</a>
+</li>
+<li><a href="uCirclepencils.html">ucirclepencils</a>
+</li>
+<li><a href="uTransform.html">utransforms</a>
+</li>
+</div>
+</div>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="uabstract-classes-riemann-sphere">
+<h1 class="title"><strong>uAbstract Classes - Riemann Sphere</strong></h1>
+<p><strong>classes defining interfaces for PyGeo geometric primitives associated with</strong>
+<strong>the unit (Riemann) origin centered sphere representing the extended complex plane</strong></p>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#class-element" id="id1" name="id1">class Element</a></li>
+<li><a class="reference" href="#class-rpoint" id="id2" name="id2">class _rPoint</a></li>
+<li><a class="reference" href="#class-upoint" id="id3" name="id3">class _uPoint</a></li>
+<li><a class="reference" href="#class-ufreeposition" id="id4" name="id4">class _uFreePosition</a></li>
+<li><a class="reference" href="#class-ucircle" id="id5" name="id5">class _uCircle</a></li>
+<li><a class="reference" href="#class-usphere" id="id6" name="id6">class _uSphere</a></li>
+<li><a class="reference" href="#class-ucirclepencil" id="id7" name="id7">class _uCirclePencil</a></li>
+<li><a class="reference" href="#class-utransformation" id="id8" name="id8">class _uTransformation</a></li>
+<li><a class="reference" href="#class-rline" id="id9" name="id9">class _rLine</a></li>
+</ul>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id1" id="class-element" name="class-element">class Element</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">the abstract class from which all PyGeo geometric objects derive</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><table border="1" class="first last docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="22%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><p class="first last">Keyword</p>
+</th>
+<th class="head"><p class="first last">Definition</p>
+</th>
+<th class="head"><p class="first last">Type</p>
+</th>
+<th class="head"><p class="first last">Default</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><p class="first last">color</p>
+</td>
+<td><p class="first last">drawn color of object</p>
+</td>
+<td><p class="first last">list of 3 numbers</p>
+</td>
+<td><p class="first last">[0,0,0] (BLACK)</p>
+</td>
+</tr>
+<tr><td><p class="first last">level</p>
+</td>
+<td><p class="first last">visibility &quot;level&quot; - see GUI</p>
+</td>
+<td><p class="first last">integer</p>
+</td>
+<td><p class="first last">1</p>
+</td>
+</tr>
+<tr><td><p class="first last">trace</p>
+</td>
+<td><p class="first last">toggle for tracing function</p>
+</td>
+<td><p class="first last">boolean</p>
+</td>
+<td><p class="first last">False</p>
+</td>
+</tr>
+<tr><td><p class="first last">texture</p>
+</td>
+<td><p class="first last">texture for Povray output</p>
+</td>
+<td><p class="first last">string</p>
+</td>
+<td><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id2" id="class-rpoint" name="class-rpoint">class _rPoint</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an O dimensional object with a defined position in space.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="../../real/real_abstracts.html#class-point">class Real._Point</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Point.html">http://mathworld.wolfram.com/Point.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>x: x coord</li>
+<li>y: y coord</li>
+<li>z: z coord</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p class="last">inherited keywords: from <a class="reference" href="../../real/real_abstracts.html#class-point">class Real._Point</a> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id3" id="class-upoint" name="class-upoint">class _uPoint</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an O dimensional object on the unit sphere.</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="../../real/real_abstracts.html#class-point">class Real._Point</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Point.html">http://mathworld.wolfram.com/Point.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>x: x coord</li>
+<li>y: y coord</li>
+<li>z: z coord</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords: from <a class="reference" href="#class-element">class Element</a> :</p>
+<p class="last">inherited keywords: from <a class="reference" href="../../real/real_abstracts.html#class-point">class Real._Point</a>   :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id4" id="class-ufreeposition" name="class-ufreeposition">class _uFreePosition</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an O dimensional object that can be picked and moved either
+freely on the unit sphere or on an object of the unit sphere</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-upoint">class _uPoint</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Point.html">http://mathworld.wolfram.com/Point.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>x: x coord</li>
+<li>y: y coord</li>
+<li>z: z coord</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords: from <a class="reference" href="#class-element">class Element</a> :</p>
+<p class="last">inherited keywords: from <a class="reference" href="../../real/real_abstracts.html#class-point">class Real._Point</a>   :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id5" id="class-ucircle" name="class-ucircle">class _uCircle</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">a spheric section of the unit sphere</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="../../real/real_abstracts.html#class-circle">class Real._Circle</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/SphericSection.html">http://mathworld.wolfram.com/SphericSection.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>_u : the unit normal of the circle's plane</li>
+<li>_d : the distance from origin of the circle's plane</li>
+<li>_s : unit vector perp to normal of the circle's plane</li>
+<li>_center: the circle's center point</li>
+<li>_cpoint: a point of the circle's circumference</li>
+<li>_radius: the circle's radius</li>
+<li>_radiusSquared: the square of circle's radius</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p class="last">inherited keywords from <a class="reference" href="../../real/real_abstracts.html#class-circle">class Real._Circle</a> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id6" id="class-usphere" name="class-usphere">class _uSphere</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">the orign centered Riemann (unit) sphere representing the extended complex plane</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="../../real/real_abstracts.html#class-sphere">class Real._Sphere</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/UnitSphere.html">http://mathworld.wolfram.com/UnitSphere.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>_center  the sphere's center point</li>
+<li>_cpoint  a point on the sphere's circumference</li>
+<li>_radius: the sphere's radius</li>
+<li>_radiusSquared: the square of the sphere's radius</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p class="last">inherited keywords from <a class="reference" href="../../real/real_abstracts.html#class-sphere">class Real._Sphere</a> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id7" id="class-ucirclepencil" name="class-ucirclepencil">class _uCirclePencil</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an <a class="reference" href="http://mathworld.wolfram.com/Array.html">array</a> of <a class="reference" href="http://mathworld.wolfram.com/Circle.html">circle</a> s on the <a class="reference" href="http://en.wikipedia.org/wiki/Riemann_sphere">Riemann sphere</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="../../real/real_abstracts.html#class-circlepencil">class Real._CirclePencil</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/SphericSection.html">http://mathworld.wolfram.com/SphericSection.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>circles: the positioned circles of the array</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p class="last">inherited keywords from <a class="reference" href="../../real/real_abstracts.html#class-circlepencil">class Real._CirclePencil</a>  :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id8" id="class-utransformation" name="class-utransformation">class _uTransformation</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">a stereographic mapping of geometric objects of the complex plane to the unit sphere</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="#class-element">class Element</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/StereographicProjection.html">http://mathworld.wolfram.com/StereographicProjection.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>transforms: the transformed positions of the given objects</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first last">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id9" id="class-rline" name="class-rline">class _rLine</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">definition:</th><td class="field-body"><p class="first">an 1 dimensional object representing &quot;breathless length&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">inherits:</th><td class="field-body"><p class="first"><a class="reference" href="../../real/real_abstracts.html#class-line">class Real._Line</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">site ref:</th><td class="field-body"><p class="first"><a class="reference" href="http://mathworld.wolfram.com/Line.html">http://mathworld.wolfram.com/Line.html</a></p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">attributes:</th><td class="field-body"><ul class="first simple">
+<li>p1: point on line</li>
+<li>p2: point on line</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">keywords:</th><td class="field-body"><p class="first">inherited keywords from <a class="reference" href="#class-element">class Element</a> :</p>
+<p class="last">inherited keywords from <a class="reference" href="../../real/real_abstracts.html#class-line">class Real._Line</a>  :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>

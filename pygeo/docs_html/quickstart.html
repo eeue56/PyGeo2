@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+    <title>QuickStart</title>
+    <link rel="stylesheet" href="stylesheets/pygeodoc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO8859-1" />
+    <meta type="description" content="rest2web - build websites with Python and docutils." />
+    <meta type="keywords" content="PyGeo - a dynamic geometry toolkit,geometry, dynamic geoemtry,
+    python, vpython " />
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="http://home.netcom.com/~ajs"></a>
+        <span id="pygeo1">PyGeo:</span>
+        <span id="pygeo2">a dynamic geometry toolkit</span>
+    </div>
+
+    
+    <div id="nav">
+        <ul>
+        <li><a href="index.html">Docs</a></li> <li>></li> <li>QuickStart</li>
+        </ul>
+    </div>
+
+    <table align="center" border="0" cellspacing="0" cellpadding="0" summary="Page layout" id="whole">
+    
+    <tr>
+    <td class="sidie" valign="top" align="left">
+
+        <div  <img src="images/pointconic.gif" width="200" height="150" border="1" alt="PyGeo website" /> 
+           <ul>  
+            <div style="margin:10px">
+<li id="sub"><strong><a id="sub" href="index.html">Docs</a></strong>
+</li>
+<li><a href="quickstart.html">QuickStart</a>
+</li>
+<li><a href="real/index.html">Real 3d Space</a>
+</li>
+<li><a href="complex/index.html">Complex Numbers</a>
+</li>
+</div>
+
+           </ul> 
+        </div>
+     </td>
+
+      <td class="docs" valign="top" align="left"  width="100%">
+      
+        <div id="main">
+        <a name="startcontent" id="startcontent"></a>
+                
+            <div class="document" id="quickstart">
+<h1 class="title"><strong>QUICKSTART</strong></h1>
+<div class="contents topic">
+<p class="topic-title first"><a id="contents" name="contents">Contents</a></p>
+<ul class="simple">
+<li><a class="reference" href="#overview" id="id1" name="id1">Overview</a></li>
+<li><a class="reference" href="#dependencies" id="id2" name="id2">Dependencies</a></li>
+<li><a class="reference" href="#editing-environment" id="id3" name="id3">Editing Environment</a></li>
+<li><a class="reference" href="#hello-point-hello-line" id="id4" name="id4">Hello Point, Hello Line</a></li>
+<li><a class="reference" href="#mouse-interaction" id="id5" name="id5">Mouse Interaction</a></li>
+<li><a class="reference" href="#panel-menu" id="id6" name="id6">Panel Menu</a></li>
+</ul>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id1" id="overview" name="overview">Overview</a></h1>
+<p>PyGeo is most fundamentally a framework for the creation of dynamic geometric constructions - i.e.
+constructions which embody defined geometric relationships while at the same time allowing
+for real time interactivity.</p>
+<p>PyGeo is, further, an implementation of the underlying abstract framework - providing
+a range of pre-built geometric objects useful for the exploration of Euclidian geometry,
+projective geometry of the plane and of space, as well as the geometry of complex numbers on
+the complex plane and on the unit sphere.</p>
+<p>PyGeo is implemented in the Python <a class="reference" href="http://www.python.org/">http://www.python.org/</a> programming language, and PyGeo constructions themselves
+are Python scripts processed directly by the Python interpreter.</p>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id2" id="dependencies" name="dependencies">Dependencies</a></h1>
+<p>In addition to the Python interpreter itself, PyGeo is dependant on the VPython <a class="reference" href="http://vpython.org/">http://vpython.org/</a> 3d rendering
+environment, as well as either Numeric or NumArray (included with the VPython binary distributions)
+for fast array processing and linear algebra operations</p>
+<p>PyGeo is capable of outputting PovRay <a class="reference" href="http://www.povray.org/">http://www.povray.org/</a> scene files to allow for high quality rendering of a
+construction's static state.</p>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id3" id="editing-environment" name="editing-environment">Editing Environment</a></h1>
+<p>While it is possible to create constructions from the Python command shell, for more involved
+efforts it is desirable to create scripts in a text editor and run them as (Python) *.py files.</p>
+<p>PyGeo at this time is distributed without an IDE environment. Most Python friendly programmers editor will
+serve as an appropriate environment for creating and running PyGeo scripts, though certain Python
+editors (e.g. PythonWin) have been found to have difficulties working with the VPython event loop.</p>
+<p>Python friendly cross platform recommendations include:</p>
+<blockquote>
+<ul class="simple">
+<li>the IDLE environment distributed with the Python interpreter and libraries.</li>
+<li>SciTE <a class="reference" href="http://www.scintilla.org/SciTE.html">http://www.scintilla.org/SciTE.html</a></li>
+<li>SPE <a class="reference" href="http://www.stani.be/python/spe/blog/">http://www.stani.be/python/spe/blog/</a></li>
+</ul>
+</blockquote>
+<p>Windows:</p>
+<blockquote>
+<ul>
+<li><p class="first">A good deal of the development of PyGeo was done using TextPad. a shareware Windows editor
+<a class="reference" href="http://www.textpad.com/">http://www.textpad.com/</a></p>
+<p>The utilities folder of the PyGeo distribution include a pygeo.syn
+that can be used for PyGeo syntax highlighting in TextPad.</p>
+</li>
+</ul>
+</blockquote>
+<p>A more complete list of Python compatible editors can be found at  <a class="reference" href="http://wiki.python.org/moin/PythonEditors">http://wiki.python.org/moin/PythonEditors</a></p>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id4" id="hello-point-hello-line" name="hello-point-hello-line">Hello Point, Hello Line</a></h1>
+<p>A PyGeo construction is created by:</p>
+<blockquote>
+<ul class="simple">
+<li>importing the PyGeo classes and constants</li>
+<li>initialize a display</li>
+<li>creating instances of geometric objects rendered in immediate mode on the display</li>
+<li>for interactivity, entering a loop in which the display screen will respond to mouse events.</li>
+</ul>
+</blockquote>
+<p>A simple interactive session from the Python command shell (say in IDLE at the Python Shell window)</p>
+<p><em>Hello Point</em> :</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; from pygeo import *
+&gt;&gt;&gt; display=display()
+&gt;&gt;&gt; FreePoint(1,4,5)
+vector(1, 4, 5)
+&gt;&gt;&gt; display.pickloop()
+</pre>
+<p><em>Hello Line</em> :</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; from pygeo import *
+&gt;&gt;&gt; display=display()
+&gt;&gt;&gt; p1 = FreePoint(1,4,5)
+vector(1, 4, 5)
+&gt;&gt;&gt; p2 = FreePoint(5,11,9)
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; Line(p1,p2)
+&gt;&gt;&gt; display.pickloop()
+</pre>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id5" id="mouse-interaction" name="mouse-interaction">Mouse Interaction</a></h1>
+<p>Once a display has entered into a event loop by a call to the pickloop() method, it will respond
+to mouse events, allowing interactivity with the construction:</p>
+<blockquote>
+<ul>
+<li><p class="first"><em>Left click</em>:</p>
+<blockquote>
+<ul class="simple">
+<li>if a pickable point is hit, the point hit will identify itself by enlarging and
+displaying as in Green</li>
+<li>if no pickable point is hit, all pickable points will respond by flashing larger
+and displaying in Blue</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><em>Left drag</em>:</p>
+<blockquote>
+<ul class="simple">
+<li>a picked point is moved in reaction to a drag with the left mouse button down.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><em>Right drag</em>:</p>
+<blockquote>
+<ul class="simple">
+<li>the scene will rotate around the camera center in reaction to movement with the
+right mouse button down</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first"><em>Middle drag, 2 button drag</em>:</p>
+<blockquote>
+<ul class="simple">
+<li>the scene will zoom closer or further in reaction to movement with the middle button, or
+the left and right buttons simultaneously down.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section">
+<h1><a class="toc-backref" href="#id6" id="panel-menu" name="panel-menu">Panel Menu</a></h1>
+<p>By default, a creation of a display also creates a separate panel that contains option box and menu
+options.  The creation of the panel can be suppressed by including the expression &quot;panel = False&quot; as a keyword
+parameter when initializing the display:</p>
+<ul>
+<li><p class="first">Information output</p>
+<p>The lower level boxes of the panel display state information, as follows, following the
+display boxes from left to right:</p>
+<ul class="simple">
+<li>the &quot;name&quot; of the currently picked point, if a label has been assigned to the point.</li>
+<li>the x,y,z coordinates of the currently selected point</li>
+<li>the current on/off state of the Trace option (see menu options, below)</li>
+<li>the current on/off state of the Drag option (see menu options, below)</li>
+</ul>
+</li>
+<li><p class="first">Check buttons and radio buttons:</p>
+<ul>
+<li><p class="first"><strong>Detail Level</strong>:</p>
+<p>when creating a geometric object (i.e. class instance) there is the option to specify
+a display level using the keyword argument &quot;level=&lt;integer value&gt;&quot;, with the level defaulting
+to &quot;1&quot; in the absence of an argument. e.g.:</p>
+<p>p1= Point(1,17,-3,level=3)</p>
+<p>sets the point p1 to be visible only when Level 3 is checked in the Detail Level check box
+group</p>
+<p>Multiple and non-consecutive levels of display can be selected and deselected.</p>
+<p>Assigning an object &quot;level = -1&quot; will assure it to be visible at all display
+levels</p>
+</li>
+<li><p class="first"><strong>Drag Constraints</strong>:</p>
+<p>to allow control movement, pickable points designed to be freely movable in space
+(FreePoint, zFreePoint) are at any one time constrained to a particular plane or direction
+relative to the display coordinate scheme.  The Drag Constraints radio button option sets
+the constraints on the movement on points picked and dragged.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Menu - Options</p>
+<ul>
+<li><p class="first"><strong>Reset to initial</strong>:</p>
+<p>returns all picked and moved points to their position at initialization, and resets all
+dependant objects to their position based on the points' initial positions.</p>
+</li>
+<li><p class="first"><strong>Remove tracings</strong></p>
+<p>remove all loci of points and/or lines created via the &quot;tracing&quot; mechanism.</p>
+</li>
+<li><p class="first"><strong>Toggle trace on/off</strong></p>
+<p>toggle the state of tracing from its current on/off state as displayed
+in the information text box.</p>
+</li>
+<li><p class="first"><strong>Toggle axis visibility</strong></p>
+<p>toggle the visibility of the representation of the 3d coordinates axes.</p>
+</li>
+<li><p class="first"><strong>Toggle drag effect</strong></p>
+<p>the  drag effect determines whether the construction attempts to update at each
+update cycle during the movement of pickable point (&quot;Drag On&quot;) or updates
+only upon release of the dragged point (&quot;Drag Off&quot;).</p>
+<p>the menu option toggles the state of the drag option form its current state
+as displayed in the information text box.</p>
+</li>
+<li><p class="first"><strong>Animate</strong></p>
+<p>invoke periodic rendering loops, inducing &quot;animation&quot; of objects (and
+their dependents) designed to re-position at each rendering loop cycle.</p>
+</li>
+<li><p class="first"><strong>Export to Povray</strong></p>
+<p>enter file browser dialogue for export of the visible elements in the scene
+to Povray scene definition format *.pov</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Menu - Help</p>
+<ul>
+<li><p class="first"><strong>PyGeo help</strong></p>
+<p>calls PyGeo main help index in html browser</p>
+</li>
+<li><p class="first"><strong>Diagram Instructions</strong></p>
+<p>displays triple quoted (&quot;&quot;&quot;) text in construction script referenced to the &quot;instructions&quot;
+keyword in the initialization of the display</p>
+</li>
+<li><p class="first"><strong>Diagram Explanation</strong></p>
+<p>displays triple quoted (&quot;&quot;&quot;) text in construction script referenced to the &quot;explanation&quot;
+keyword in the initialization of the display</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    
+            <div id="end">
+                <p><a href="#startcontent">Return to Top</a><br />
+                </p>
+            </div>
+        
+        </div>
+    </td>
+     </tr>
+     </table>
+
+
+</body></html>
