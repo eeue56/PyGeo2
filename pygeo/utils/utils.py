@@ -4,11 +4,11 @@ __all__=['makecolor','permrange','permsets','subsets','isSubset','randomXYZ']
 
 def makecolor(r=None,g=None,b=None):
   if not r:
-    r=random()
+    r = random()
   if not g:
-    g=random()
+    g = random()
   if not b:
-    b=random()
+    b = random()
   return (r,g,b)
 
 
@@ -16,37 +16,45 @@ def makecolor(r=None,g=None,b=None):
 # to my question on getting a permutation of
 # a list excluding instance where list== list.reverse
 
-def permrange(e,n=None):
-   I=[]
-   def perms(source,done,current=[]):
+def permrange(e, n=None):
+   range_items = []
+   
+   def perms(source, done, current=[]):
       if done == len(source):
          if current[0] < current[-1]:
-            I.append(current)
+            range_items.append(current)
       else:
          for s in source:
             if s not in current:
                 perms(source,done+1,current+[s])
-      if  len(I):
-         return I
-   source=range(e)
+      if range_items:
+         return range_items
+         
+   source = range(e)
+   
    if not n:
       done = 0
    else:
-      done=e-n
+      done = e-n
 
    if n == 0:
       return []
 
    if n == 1:
       for s in source:
-         I.append([s])
+         range_items.append([s])
    else:
       perms(source,done)
-   return I
+      
+   return range_items
 
 
-def permsets(source,size):
-   def permcalc(source,done,current=[]):
+def permsets(source, size):
+	
+   def permcalc(source, done, current=None):
+	  if current is None:
+		 current = list()
+		 
       if done == len(source):
          if current[0] < current[-1]:
             P.append(current)
@@ -54,8 +62,9 @@ def permsets(source,size):
          for i in source:
             if i not in current:
                 permcalc(source,done+1,current+[i])
-   P=[]
-   done = len(source)-size
+                
+   P = list()
+   done = len(source) - size
    permcalc(source,done)
    return P
 
